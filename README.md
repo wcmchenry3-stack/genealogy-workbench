@@ -86,6 +86,15 @@ in `reports/registry.py`. It shows up in the UI automatically, with its
 parameters, and the runner works out which data files it needs. See
 `reports/base.py` for the contract.
 
+### Further reading
+
+- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — how the code works, module by
+  module: the data contracts, the report registry, the geocoding tiers, and the
+  handful of places that will bite you if you change them carelessly.
+- **[docs/PROJECT-HISTORY.md](docs/PROJECT-HISTORY.md)** — what was built and why,
+  the decisions and their reasoning, the bugs found along the way, and what was
+  and wasn't verified.
+
 ---
 
 ## Place lookup
