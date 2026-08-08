@@ -1,0 +1,19 @@
+# Personal family data never belongs in the repo
+*.ged
+*.gedcom
+data/master_tree.csv
+data/events.csv
+data/config.json
+runs/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp

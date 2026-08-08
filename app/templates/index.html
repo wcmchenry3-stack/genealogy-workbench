@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genealogy Workbench</title>
+<style>
+:root{color-scheme:light dark;
+ --surface-1:#fcfcfb;--surface-2:#f4f4f1;--surface-3:#eceae5;--line:#e2e1dc;
+ --text-primary:#0b0b0b;--text-secondary:#52514e;--text-muted:#7a7975;
+ --s0:#2a78d6;--s1:#eb6834;--s2:#1baf7a;--s3:#eda100;--s5:#008300;}
+@media (prefers-color-scheme:dark){:root{
+ --surface-1:#1a1a19;--surface-2:#232322;--surface-3:#2c2c2a;--line:#373735;
+ --text-primary:#fff;--text-secondary:#c3c2b7;--text-muted:#95948c;
+ --s0:#3987e5;--s1:#d95926;--s2:#199e70;--s3:#c98500;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface-1);color:var(--text-primary);
+ font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:34px 24px 90px}
+h1{font-size:25px;margin:0 0 4px;letter-spacing:-.02em}
+.tag{color:var(--text-secondary);margin:0 0 30px;font-size:14px}
+.step{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;
+ padding:20px 22px;margin:0 0 16px}
+.step.off{opacity:.5;pointer-events:none}
+.hd{display:flex;align-items:baseline;gap:10px;margin:0 0 4px}
+.n{width:22px;height:22px;border-radius:50%;background:var(--s0);color:#fff;font-size:12px;
+ font-weight:700;display:grid;place-items:center;flex:none}
+.step h2{font-size:16.5px;margin:0}
+.hint{color:var(--text-secondary);font-size:13px;margin:2px 0 14px 32px}
+.body{margin-left:32px}
+button{font:inherit;background:var(--surface-1);color:var(--text-primary);border:1px solid var(--line);
+ border-radius:9px;padding:7px 13px;cursor:pointer}
+button:hover{background:var(--surface-3)}
+button.pri{background:var(--s0);border-color:var(--s0);color:#fff;font-weight:600;padding:11px 22px;font-size:15px}
+button.pri:disabled{background:var(--surface-3);border-color:var(--line);color:var(--text-muted);cursor:not-allowed}
+input,select{font:inherit;background:var(--surface-1);color:var(--text-primary);
+ border:1px solid var(--line);border-radius:9px;padding:8px 11px}
+input[type=text],input[type=search]{width:100%}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.picked{background:var(--surface-1);border:1px solid var(--line);border-radius:10px;
+ padding:10px 13px;font-size:13.5px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.picked b{font-weight:600}
+.mut{color:var(--text-muted)}
+.sm{font-size:12.5px}
+.browser{border:1px solid var(--line);border-radius:10px;max-height:270px;overflow:auto;
+ background:var(--surface-1);margin-top:10px}
+.browser div{padding:7px 12px;cursor:pointer;font-size:13.5px;border-bottom:1px solid var(--line)}
+.browser div:last-child{border-bottom:none}
+.browser div:hover{background:var(--surface-3)}
+.browser .ged{color:var(--s0);font-weight:600}
+.results{max-height:280px;overflow:auto;border:1px solid var(--line);border-radius:10px;
+ background:var(--surface-1);margin-top:10px}
+.results div{padding:8px 12px;cursor:pointer;border-bottom:1px solid var(--line);font-size:13.5px}
+.results div:last-child{border-bottom:none}
+.results div:hover{background:var(--surface-3)}
+.rep{display:flex;gap:11px;padding:13px;border:1px solid var(--line);border-radius:11px;
+ background:var(--surface-1);margin-bottom:9px;align-items:flex-start}
+.rep input{margin-top:3px;flex:none}
+.rep h3{margin:0 0 2px;font-size:14.5px}
+.rep p{margin:0;font-size:12.5px;color:var(--text-secondary)}
+.rep .prm{margin-top:9px;display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.rep .prm label{font-size:12px;color:var(--text-muted);display:flex;gap:5px;align-items:center}
+.rep .prm input{width:92px;padding:5px 8px;font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fld label{display:block;font-size:12px;color:var(--text-muted);margin-bottom:4px;
+ text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+#log{background:#111;color:#d8d8d2;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+ border-radius:10px;padding:14px;max-height:260px;overflow:auto;white-space:pre-wrap;margin-top:12px}
+.art{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 13px;
+ border:1px solid var(--line);border-radius:10px;background:var(--surface-1);margin-bottom:8px}
+.art a{color:var(--s0);font-weight:600;text-decoration:none}
+.badge{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;
+ border-radius:5px;background:var(--surface-3);color:var(--text-secondary);font-weight:700}
+.fail{border-left:3px solid var(--s1)}
+.ok{color:var(--s5);font-weight:600}
+.warn{background:var(--surface-3);border-left:3px solid var(--s3);padding:10px 13px;
+ border-radius:8px;font-size:13px;color:var(--text-secondary);margin:12px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Genealogy Workbench</h1>
+  <p class="tag">Pick a family file, choose who to centre it on, and run any of the reports.</p>
+
+  <!-- 1. GEDCOM -->
+  <div class="step" id="s1">
+    <div class="hd"><span class="n">1</span><h2>Family file</h2></div>
+    <p class="hint">Choose a <code>.ged</code> file on this computer.</p>
+    <div class="body">
+      <div class="row">
+        <input type="text" id="gedPath" placeholder="Path to your .ged file" style="flex:1;min-width:280px">
+        <button onclick="openBrowser()">Browse…</button>
+        <button onclick="loadGed()">Use this file</button>
+      </div>
+      <div id="browser" class="browser" style="display:none"></div>
+      <div id="gedInfo" style="margin-top:11px"></div>
+    </div>
+  </div>
+
+  <!-- 2. Person -->
+  <div class="step off" id="s2">
+    <div class="hd"><span class="n">2</span><h2>Focus person</h2></div>
+    <p class="hint">Reports are built around this person's ancestry.</p>
+    <div class="body">
+      <div id="picked"></div>
+      <div class="row" style="margin-top:10px">
+        <input type="search" id="pq" placeholder="Search by name…" style="flex:1;min-width:240px"
+               oninput="searchPeople()">
+      </div>
+      <div id="presults" class="results" style="display:none"></div>
+    </div>
+  </div>
+
+  <!-- 3. Scope -->
+  <div class="step off" id="s3">
+    <div class="hd"><span class="n">3</span><h2>Scope</h2></div>
+    <p class="hint">Applies to every report that traces ancestry or plots events over time.</p>
+    <div class="body">
+      <div class="grid2">
+        <div class="fld"><label>Max generations</label>
+          <input type="number" id="maxGens" min="1" max="99" placeholder="all" oninput="preview()"></div>
+        <div class="fld"><label>Ancestors at this depth</label>
+          <div id="prev" class="picked"><span class="mut">—</span></div></div>
+        <div class="fld"><label>Earliest year</label>
+          <input type="number" id="yMin" placeholder="no limit"></div>
+        <div class="fld"><label>Latest year</label>
+          <input type="number" id="yMax" placeholder="no limit"></div>
+      </div>
+      <label class="row sm" style="margin-top:13px;cursor:pointer">
+        <input type="checkbox" id="useNet" checked>
+        <span>Look up unknown places online (needed for places outside the US)</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- 4. Reports -->
+  <div class="step off" id="s4">
+    <div class="hd"><span class="n">4</span><h2>Reports</h2></div>
+    <p class="hint">Pick as many as you like.</p>
+    <div class="body">
+      <div class="row" style="margin-bottom:12px">
+        <button onclick="pickAll(true)">Select all</button>
+        <button onclick="pickAll(false)">Clear</button>
+      </div>
+      <div id="reps"></div>
+    </div>
+  </div>
+
+  <div style="margin-top:22px"><button class="pri" id="go" disabled onclick="run()">Run reports</button></div>
+
+  <div class="step" id="s5" style="display:none;margin-top:20px">
+    <div class="hd"><span class="n">5</span><h2>Results</h2></div>
+    <div class="body">
+      <div id="status" class="sm mut"></div>
+      <div id="arts"></div>
+      <div id="log"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let GED="", TARGET=null, REPORTS=[], JOB=null, TIMER=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function jget(u){const r=await fetch(u);return r.json();}
+
+// ---- step 1: file browsing
+async function openBrowser(p){
+  const b=$("browser"); b.style.display="block";
+  const d=await jget("/api/browse?path="+encodeURIComponent(p||$("gedPath").value||""));
+  let h=`<div onclick="openBrowser('${esc(d.parent)}')">&larr; ${esc(d.parent)}</div>`;
+  (d.drives||[]).forEach(dr=>h+=`<div onclick="openBrowser('${esc(dr)}')">💾 ${esc(dr)}</div>`);
+  d.dirs.forEach(x=>h+=`<div onclick="openBrowser('${esc(x.path).replace(/\\/g,'\\\\')}')">📁 ${esc(x.name)}</div>`);
+  d.files.forEach(x=>h+=`<div class="ged" onclick="chooseGed('${esc(x.path).replace(/\\/g,'\\\\')}')">📄 ${esc(x.name)} <span class="mut sm">${(x.bytes/1048576).toFixed(1)} MB</span></div>`);
+  if(!d.dirs.length&&!d.files.length)h+='<div class="mut">Nothing here.</div>';
+  b.innerHTML=h;
+}
+function chooseGed(p){$("gedPath").value=p;$("browser").style.display="none";loadGed();}
+
+async function loadGed(){
+  const p=$("gedPath").value.trim(); if(!p)return;
+  $("gedInfo").innerHTML='<span class="mut sm">Reading…</span>';
+  const d=await jget("/api/tree/summary?gedcom="+encodeURIComponent(p));
+  if(d.error){$("gedInfo").innerHTML=`<div class="warn">Could not read that file: ${esc(d.error)}</div>`;return;}
+  GED=p;
+  $("gedInfo").innerHTML=`<div class="picked"><span><b>${d.individuals.toLocaleString()}</b> people, <b>${d.families.toLocaleString()}</b> families</span><span class="ok">✓ loaded</span></div>`;
+  $("s2").classList.remove("off"); $("s3").classList.remove("off"); $("s4").classList.remove("off");
+  if(d.default_target)setTarget(d.default_target,true);
+  preview();
+}
+
+// ---- step 2: person
+function setTarget(t,isDefault){
+  TARGET=t;
+  $("picked").innerHTML=`<div class="picked"><span><b>${esc(t.name)}</b>
+    <span class="mut sm">${esc(t.birth||"")}${t.birth_place?" · "+esc(t.birth_place):""}</span></span>
+    <span class="mut sm">${isDefault?"default":"selected"}</span></div>`;
+  $("presults").style.display="none"; $("pq").value="";
+  preview(); check();
+}
+let pqTimer=null;
+function searchPeople(){clearTimeout(pqTimer);pqTimer=setTimeout(doSearch,220);}
+async function doSearch(){
+  const q=$("pq").value.trim(); if(q.length<2){$("presults").style.display="none";return;}
+  const rows=await jget(`/api/people?gedcom=${encodeURIComponent(GED)}&q=${encodeURIComponent(q)}`);
+  if(rows.error)return;
+  $("presults").style.display="block";
+  $("presults").innerHTML=rows.length?rows.map((r,i)=>
+    `<div onclick='setTarget(${JSON.stringify(r).replace(/'/g,"&#39;")})'>
+      <b>${esc(r.name)}</b> <span class="mut sm">${esc(r.birth||"?")}${r.birth_place?" · "+esc(r.birth_place):""}</span></div>`
+  ).join(""):'<div class="mut">No matches.</div>';
+}
+
+// ---- step 3
+let pvTimer=null;
+function preview(){clearTimeout(pvTimer);pvTimer=setTimeout(doPreview,260);}
+async function doPreview(){
+  if(!GED||!TARGET)return;
+  const g=$("maxGens").value;
+  const d=await jget(`/api/preview?gedcom=${encodeURIComponent(GED)}&target=${encodeURIComponent(TARGET.id)}&max_generations=${g}`);
+  if(d.error)return;
+  $("prev").innerHTML=`<span><b>${d.ancestors.toLocaleString()}</b> ancestors</span><span class="mut sm">${d.deepest} generations deep</span>`;
+}
+
+// ---- step 4
+async function loadReports(){
+  REPORTS=await jget("/api/reports");
+  $("reps").innerHTML=REPORTS.map(r=>{
+    const own=r.params.filter(p=>!["max_generations","year_min","year_max"].includes(p.key));
+    const prm=own.length?`<div class="prm">`+own.map(p=>
+      `<label>${esc(p.label)}<input type="number" data-rep="${r.id}" data-key="${p.key}"
+        value="${p.default==null?"":p.default}" ${p.min!=null?`min="${p.min}"`:""} ${p.max!=null?`max="${p.max}"`:""}></label>`).join("")+`</div>`:"";
+    const dep=r.requires.length?` <span class="badge">also runs ${esc(r.requires.join(", "))}</span>`:"";
+    return `<div class="rep"><input type="checkbox" class="repchk" value="${r.id}" onchange="check()">
+      <div style="flex:1"><h3>${esc(r.title)}${dep}</h3><p>${esc(r.description)}</p>${prm}</div></div>`;
+  }).join("");
+}
+function pickAll(v){document.querySelectorAll(".repchk").forEach(c=>c.checked=v);check();}
+function check(){
+  const any=[...document.querySelectorAll(".repchk")].some(c=>c.checked);
+  $("go").disabled=!(GED&&TARGET&&any);
+}
+
+// ---- run
+async function run(){
+  const ids=[...document.querySelectorAll(".repchk:checked")].map(c=>c.value);
+  const params={_shared:{max_generations:$("maxGens").value,year_min:$("yMin").value,year_max:$("yMax").value}};
+  document.querySelectorAll("[data-rep]").forEach(i=>{
+    if(i.value==="")return;
+    params[i.dataset.rep]=params[i.dataset.rep]||{};
+    params[i.dataset.rep][i.dataset.key]=i.value;
+  });
+  $("go").disabled=true; $("s5").style.display="block";
+  $("arts").innerHTML=""; $("log").textContent=""; $("status").textContent="Starting…";
+  $("s5").scrollIntoView({behavior:"smooth"});
+  const r=await fetch("/api/run",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({gedcom:GED,target_id:TARGET.id,target_name:TARGET.name,
+      reports:ids,params,use_network:$("useNet").checked})});
+  JOB=(await r.json()).job;
+  TIMER=setInterval(poll,900); poll();
+}
+async function poll(){
+  const j=await jget("/api/job/"+JOB);
+  $("log").textContent=j.lines.join("\n");
+  $("log").scrollTop=$("log").scrollHeight;
+  $("status").textContent=j.state==="running"?"Running…":(j.state==="done"?"Finished":j.state);
+  if(j.reports.length)renderArts(j);
+  if(j.state==="done"||j.state==="error"){
+    clearInterval(TIMER); $("go").disabled=false;
+    if(j.error)$("status").innerHTML=`<div class="warn">${esc(j.error)}</div>`;
+  }
+}
+function renderArts(j){
+  $("arts").innerHTML=j.reports.map(r=>{
+    if(!r.ok)return `<div class="art fail"><span><b>${esc(r.title)}</b><br>
+      <span class="mut sm">${esc(r.error||"failed")}</span></span></div>`;
+    return r.artifacts.map(a=>`<div class="art"><span>
+      <a href="/runs/${j.run_dir}/${a.rel}" target="_blank">${esc(a.title)}</a>
+      <span class="badge">${esc(a.kind)}</span><br>
+      <span class="mut sm">${esc(r.title)}${a.note?" · "+esc(a.note):""} · ${(a.bytes/1024).toFixed(0)} KB</span>
+      </span></div>`).join("");
+  }).join("");
+}
+loadReports();
+</script>
+</body>
+</html>
