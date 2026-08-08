@@ -445,11 +445,18 @@ function draw(){{
   n+=evs.length;
   const isC=evs.some(e=>e.cat==='cemetery');
   const cat=isC?'cemetery':evs[0].cat;
-  const r=Math.max(4.5,Math.min(13,3+Math.sqrt(evs.length)*2.1));
+  const r=Math.max(6,Math.min(15,3.5+Math.sqrt(evs.length)*2.3));
   const g=document.createElementNS('http://www.w3.org/2000/svg','g');
   g.setAttribute('class','pin');
-  if(isC)g.innerHTML=`<circle class="ring" cx="${{p.x}}" cy="${{p.y}}" r="${{r+3.5}}"/>`;
-  g.innerHTML+=`<circle class="core" cx="${{p.x}}" cy="${{p.y}}" r="${{r}}" fill="${{CV(COL[cat])}}" fill-opacity=".88"/>`;
+  // The marker's own radius is in *screen* pixels, not map units: this inner
+  // group's scale(1/k) exactly cancels the #pan group's scale(k), so the pin
+  // renders at a constant, comfortably clickable size no matter how far the
+  // county map itself is zoomed in or out. Position stays correct because
+  // translate happens before the counter-scale (see rescalePins()).
+  g.setAttribute('data-px',p.x);g.setAttribute('data-py',p.y);
+  g.setAttribute('transform',`translate(${{p.x}} ${{p.y}}) scale(${{1/k}})`);
+  if(isC)g.innerHTML=`<circle class="ring" cx="0" cy="0" r="${{r+3.5}}"/>`;
+  g.innerHTML+=`<circle class="core" cx="0" cy="0" r="${{r}}" fill="${{CV(COL[cat])}}" fill-opacity=".88"/>`;
   g.addEventListener('click',ev=>{{ev.stopPropagation();show(p,evs);}});
   const t=document.createElementNS('http://www.w3.org/2000/svg','title');
   t.textContent=p.label+' — '+evs.length+' event'+(evs.length>1?'s':'');
@@ -457,6 +464,14 @@ function draw(){{
  }}
  document.getElementById('count').textContent=vis.length+' places · '+n+' events';
  if(sel){{const m=vis.find(o=>o.p.key===sel);m?show(m.p,m.evs,true):clearPanel();}}
+}}
+function rescalePins(){{
+ // Re-run after every change to k (zoom in/out, fit) so markers already on
+ // screen keep their constant size instead of scaling with the map under them.
+ document.querySelectorAll('.pin').forEach(g=>{{
+  const px=g.getAttribute('data-px'), py=g.getAttribute('data-py');
+  g.setAttribute('transform',`translate(${{px}} ${{py}}) scale(${{1/k}})`);
+ }});
 }}
 function clearPanel(){{sel=null;panel.innerHTML='<h2>Select a place</h2><p class="pm">Click any marker to see who was there and when.</p>';}}
 function show(p,evs,keep){{
@@ -479,7 +494,7 @@ function show(p,evs,keep){{
 const svg=document.getElementById('map'),pan=document.getElementById('pan');
 let k=1,tx=0,ty=0,drag=null;
 const apply=()=>pan.setAttribute('transform',`translate(${{tx}} ${{ty}}) scale(${{k}})`);
-function zoom(f){{const cx={w / 2},cy={h / 2};tx=cx-(cx-tx)*f;ty=cy-(cy-ty)*f;k*=f;apply();}}
+function zoom(f){{const cx={w / 2},cy={h / 2};tx=cx-(cx-tx)*f;ty=cy-(cy-ty)*f;k*=f;apply();rescalePins();}}
 document.getElementById('zi').onclick=()=>zoom(1.4);
 document.getElementById('zo').onclick=()=>zoom(1/1.4);
 function fit(pins_only){{
@@ -496,7 +511,7 @@ function fit(pins_only){{
  if(sw/sh > (vAr>ar?vAr:ar)) sh=sw/(vAr>ar?vAr:ar); else sw=sh*(vAr>ar?vAr:ar);
  const cx=(x0+x1)/2, cy=(y0+y1)/2;
  if(ar>vAr) k=vh/sh; else k=vw/sw;
- tx=vw/2-cx*k; ty=vh/2-cy*k; apply();
+ tx=vw/2-cx*k; ty=vh/2-cy*k; apply();rescalePins();
 }}
 document.getElementById('zr').onclick=()=>fit(true);
 document.getElementById('za').onclick=()=>fit(false);
