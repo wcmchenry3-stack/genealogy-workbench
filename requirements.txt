@@ -5,3 +5,5 @@ rapidfuzz>=3.0
 zipcodes>=1.2
 pypdf>=4.0
 tqdm>=4.66
+pyshp>=3.0
+basemap-data>=2.0
