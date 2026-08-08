@@ -17,6 +17,7 @@ a pin placed at a county centroid says so rather than implying a street match.
 """
 from __future__ import annotations
 
+import collections
 import json
 import re
 import statistics
@@ -26,7 +27,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable, Optional
 
-from .places import PlaceRef, parse_place, counties_index_from_zipcodes
+from .places import COUNTY_SUFFIX, PlaceRef, _subregion_name, parse_place, counties_index_from_zipcodes
 
 NOMINATIM_UA = "genealogy-workbench/1.0 (wcmchenry3@gmail.com)"
 MIN_DELAY_S = 1.1          # Nominatim asks for <= 1 req/sec; leave headroom.
@@ -90,11 +91,13 @@ class OfflineUS:
         self.city: dict = {}
         self.county: dict = {}
         self.city_names: dict = {}
+        self.city_county: dict = {}         # (state, city) -> proper-cased county name
         self.available = False
         try:
             import zipcodes  # type: ignore
         except Exception:
             return
+        county_votes: dict = {}
         for z in zipcodes.list_all():
             try:
                 lat, lon = float(z["lat"]), float(z["long"])
@@ -102,12 +105,18 @@ class OfflineUS:
                 continue
             st = z["state"]
             city = (z.get("city") or "").lower()
-            cty = re.sub(r"\s+(County|Parish)$", "", z.get("county") or "", flags=re.I).lower()
+            county_name = re.sub(r"\s+(County|Parish)$", "", z.get("county") or "", flags=re.I).strip()
             if city:
                 self.city.setdefault((st, city), []).append((lat, lon))
                 self.city_names.setdefault(st, set()).add(city)
-            if cty:
-                self.county.setdefault((st, cty), []).append((lat, lon))
+                if county_name:
+                    county_votes.setdefault((st, city), collections.Counter())[county_name] += 1
+            if county_name:
+                self.county.setdefault((st, county_name.lower()), []).append((lat, lon))
+        # A (state, city) pair can span more than one ZIP record -- rare, but
+        # occasionally a couple of them disagree on county. Go with whichever
+        # county most of that city's ZIP records actually named.
+        self.city_county = {k: v.most_common(1)[0][0] for k, v in county_votes.items()}
         self.available = True
 
     @staticmethod
@@ -128,6 +137,7 @@ class OfflineUS:
             pts = self.city.get((st, c.lower()))
             if pts:
                 lat, lon = self._centroid(pts)
+                self._backfill_county(ref, st, c.lower())
                 return GeoResult(lat, lon, "city", "offline", ref.label())
         # "Mayfield" -> "Mayfield Heights" / "Mayfield Village"
         for c in filter(None, cands):
@@ -137,6 +147,7 @@ class OfflineUS:
             if hits:
                 pts = [p for h in hits for p in self.city[(st, h)]]
                 lat, lon = self._centroid(pts)
+                self._backfill_county(ref, st, hits[0])
                 return GeoResult(lat, lon, "city (nearest named match)", "offline", ref.label())
         if ref.subregion:
             pts = self.county.get((st, ref.subregion.lower()))
@@ -145,6 +156,16 @@ class OfflineUS:
                 note = "county centroid" + (" (small place not in gazetteer)" if loc else "")
                 return GeoResult(lat, lon, note, "offline", ref.label())
         return GeoResult()
+
+    def _backfill_county(self, ref: PlaceRef, state_code: str, city_key: str) -> None:
+        """Fill in a county the raw place string never mentioned, from the same
+        ZIP-code gazetteer record that just matched this city -- never
+        overwrites a county the string parser already found."""
+        if ref.subregion:
+            return
+        county = self.city_county.get((state_code, city_key))
+        if county:
+            ref.subregion = county
 
 
 # ------------------------------------------------------------- Nominatim
@@ -209,9 +230,19 @@ class Geocoder:
                 self.stats["failed"] += 1
                 return ref, GeoResult()
             self.stats["cache"] += 1
-            return ref, GeoResult(cached.get("lat"), cached.get("lon"),
-                                  cached.get("precision", "cached"), "cache",
-                                  cached.get("address", ""))
+            r = GeoResult(cached.get("lat"), cached.get("lon"),
+                         cached.get("precision", "cached"), "cache",
+                         cached.get("address", ""))
+            self._backfill_subregion(ref, r.display)
+            if not ref.subregion and self._offline:
+                # A cached result from the offline tier stores only ref.label() as
+                # its "address" -- self-referential, nothing new to parse out of it.
+                # Consult the gazetteer's fast in-memory city->county map directly
+                # instead, so a place resolved (and cached) before this fix existed
+                # still gets its county filled in on the next run, with no new
+                # lookup and no need to clear the cache.
+                self._offline.lookup(ref)
+            return ref, r
 
         if self._offline:
             r = self._offline.lookup(ref)
@@ -227,6 +258,12 @@ class Geocoder:
             r = self._net.lookup(ref.geocode_query())
             if r.ok:
                 self.stats["nominatim"] += 1
+                # Nominatim's own address string usually names the county even when
+                # the GEDCOM place string never did ("Lincklaen, New York, USA" comes
+                # back as "Lincklaen, Chenango County, New York, ..."). Recover it
+                # rather than reporting the county as unspecified when the geocoder
+                # itself just told us what it is.
+                self._backfill_subregion(ref, r.display)
                 self.cache.set(key, {"lat": r.lat, "lon": r.lon,
                                      "precision": r.precision, "address": r.display})
                 return ref, r
@@ -238,6 +275,20 @@ class Geocoder:
         if network_ran:
             self.cache.set(key, None)
         return ref, GeoResult()
+
+    @staticmethod
+    def _backfill_subregion(ref: PlaceRef, address: str) -> None:
+        """Fill in a county the raw place string never mentioned, when the
+        geocoder's own address string names one. Never overwrites a county the
+        string parser already found -- that one came from the source record
+        itself and outranks one merely inferred from a geocoder response."""
+        if ref.subregion or not address:
+            return
+        for part in address.split(","):
+            m = COUNTY_SUFFIX.match(part.strip())
+            if m:
+                ref.subregion = _subregion_name(m.group(1), m.group(2))
+                return
 
     def resolve_many(self, places, progress: Optional[Callable[[int, int, str], None]] = None):
         places = list(dict.fromkeys(p for p in places if p and p.strip()))

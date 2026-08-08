@@ -13394,5 +13394,2516 @@
   "lon": -75.8725,
   "precision": "city",
   "address": "De Ruyter, Madison Co., NY"
+ },
+ "Lake Louise, Banff, Alberta, Canada": {
+  "lat": 51.424967,
+  "lon": -116.177535,
+  "precision": "nominatim",
+  "address": "Lake Louise, Improvement District No. 9, Alberta, Canada"
+ },
+ "Rochester Hills, MI": {
+  "lat": 42.658366,
+  "lon": -83.149932,
+  "precision": "nominatim",
+  "address": "Rochester Hills, Oakland County, Michigan, 48309, United States"
+ },
+ "Auborn, Ohio": null,
+ "Auburn Ohio": {
+  "lat": 39.391166,
+  "lon": -84.702172,
+  "precision": "nominatim",
+  "address": "Auburn, Hanover Township, Butler County, Ohio, 44013, United States"
+ },
+ "St-Chrysostôme, Québec": {
+  "lat": 45.102711,
+  "lon": -73.759907,
+  "precision": "nominatim",
+  "address": "Saint-Chrysostome, Le Haut-Saint-Laurent, Montérégie, Québec, J0S 1R0, Canada"
+ },
+ "Prescott and Russell, Prescott and Russell, Ontario, Canada": {
+  "lat": 45.513464,
+  "lon": -74.906598,
+  "precision": "nominatim",
+  "address": "Prescott and Russell Counties, Eastern Ontario, Ontario, Canada"
+ },
+ "Youngsitown": null,
+ "Steubenville": {
+  "lat": 40.360071,
+  "lon": -80.615103,
+  "precision": "nominatim",
+  "address": "Steubenville, Jefferson County, Ohio, 43952, United States"
+ },
+ "Karez, Bohemia": {
+  "lat": 49.821584,
+  "lon": 13.782546,
+  "precision": "nominatim",
+  "address": "Kařez, okres Rokycany, Plzeňský kraj, Jihozápad, 338 07, Česko"
+ },
+ "New York NY": {
+  "lat": 40.712728,
+  "lon": -74.006015,
+  "precision": "nominatim",
+  "address": "New York, United States"
+ },
+ "Ontario, Ontario, Canada": {
+  "lat": 43.005423,
+  "lon": -81.274801,
+  "precision": "nominatim",
+  "address": "Western University, Windermere Road, London, Southwestern Ontario, Ontario, N6G 2V4, Canada"
+ },
+ "Uxbridge, Ontario, Ontario, Canada": {
+  "lat": 44.10885,
+  "lon": -79.122677,
+  "precision": "nominatim",
+  "address": "Uxbridge, Durham Region, Golden Horseshoe, Ontario, Canada"
+ },
+ "Uxbridge, Ontario, Canada West, Canada": null,
+ "Ste-Martine, Québec": {
+  "lat": 45.246129,
+  "lon": -73.804436,
+  "precision": "nominatim",
+  "address": "Sainte-Martine, Beauharnois-Salaberry, Montérégie, Québec, J0S 1V0, Canada"
+ },
+ "Ottawa, Ontario, Canada": {
+  "lat": 45.420878,
+  "lon": -75.690111,
+  "precision": "nominatim",
+  "address": "Ottawa, Eastern Ontario, Ontario, Canada"
+ },
+ "?West Hawkesbury, Ontario, Canada": {
+  "lat": 45.536289,
+  "lon": -74.645699,
+  "precision": "nominatim",
+  "address": "West Hawkesbury, Champlain, Prescott and Russell Counties, Eastern Ontario, Ontario, Canada"
+ },
+ "Prescott, Canada West, Canada": null,
+ "Central Bohemia, Czechia": {
+  "lat": 50.060158,
+  "lon": 13.830748,
+  "precision": "nominatim",
+  "address": "Střední Čechy, Česko"
+ },
+ "Home District, Ontario, Canada": {
+  "lat": 45.018465,
+  "lon": -75.648071,
+  "precision": "nominatim",
+  "address": "Kemptville & District Home Support, 215, Sanders Street, Kemptville, North Grenville, Merrickville-Wolford, Leeds and Grenville Counties, Eastern Ontario, Ontario, K0G 1J0, Canada"
+ },
+ "St-Roch-l`Achigan, Québec, Canada": {
+  "lat": 45.825552,
+  "lon": -73.602725,
+  "precision": "nominatim",
+  "address": "Petro-Canada, Rue Armand-Majeau, Saint-Roch-de-l'Achigan, Montcalm, Lanaudière, Québec, J0K 3H0, Canada"
+ },
+ "Morebattle, , Roxburghshire, Scotland,": null,
+ ",,Quebec,Canada": {
+  "lat": 52.476089,
+  "lon": -71.825867,
+  "precision": "nominatim",
+  "address": "Québec, Canada"
+ },
+ "Ottawa County, Canada East (Quebec), Canada": null,
+ "Oberkirchen, Saarland, Deutschland": {
+  "lat": 49.526778,
+  "lon": 7.259038,
+  "precision": "nominatim",
+  "address": "Oberkirchen, Freisen, Landkreis St. Wendel, Saarland, Deutschland"
+ },
+ "District 44, Ohio, Virginia, USA": {
+  "lat": 39.382239,
+  "lon": -81.436064,
+  "precision": "nominatim",
+  "address": "44, Ed District Road, Wood County, West Virginia, 26187, United States"
+ },
+ "South Wheeling, Wheeling, Ohio, Virginia, USA": {
+  "lat": 40.041462,
+  "lon": -80.724526,
+  "precision": "nominatim",
+  "address": "South Wheeling Historic District, Wheeling, Ohio County, West Virginia, 26031, United States"
+ },
+ "Lincklaen, New York, USA": {
+  "lat": 42.675624,
+  "lon": -75.876862,
+  "precision": "nominatim",
+  "address": "Town of Lincklaen, Chenango County, New York, United States"
+ },
+ "Hotel, Alpes-de-Haute-Provence, Provence-Alpes-Cote d'Azur, France": {
+  "lat": 44.930728,
+  "lon": 6.723376,
+  "precision": "nominatim",
+  "address": "Hôtel, Tranchée Couverte de Montgenèvre, Le Clot, Montgenèvre, Briançon, Hautes-Alpes, Provence-Alpes-Côte d'Azur, France métropolitaine, 05100, France"
+ },
+ "Suffield, Hartford, Connecticut, USA": {
+  "lat": 41.9859,
+  "lon": -72.6463,
+  "precision": "city",
+  "address": "Suffield, Hartford Co., CT"
+ },
+ "St Philippe, La Prairie, Quebec, Canada": {
+  "lat": 45.358378,
+  "lon": -73.478304,
+  "precision": "nominatim",
+  "address": "Saint-Philippe, Roussillon, Montérégie, Québec, J0L 2K0, Canada"
+ },
+ "Verchères, (Saint-François-Xavier), (Verchères), Québec, Canada": {
+  "lat": 45.772785,
+  "lon": -73.355442,
+  "precision": "nominatim",
+  "address": "Verchères, Marguerite-D'Youville, Montérégie, Québec, J0L 2R0, Canada"
+ },
+ "St-Jacques-de-L’Achigan, Québec, Canada": null,
+ "Mascouche (St-Henri), Québec, Canada": null,
+ "Roemisch-Katholische, Baumholder, Rheinland, Allemagne": null,
+ "Roemisch-Katholische, Baumholder, Rheinland, Prussia": null,
+ "Baden, Baden-Baden, Baden-Württemberg, Germany": {
+  "lat": 48.192837,
+  "lon": 8.139029,
+  "precision": "nominatim",
+  "address": "Baden, Baden-Württemberg, 79215, Deutschland"
+ },
+ "Granville, Hampden, Massachusetts, USA": {
+  "lat": 42.1127,
+  "lon": -72.952,
+  "precision": "city",
+  "address": "Granville, Hampden Co., MA"
+ },
+ "Seneca, NY": {
+  "lat": 42.71975,
+  "lon": -76.81795,
+  "precision": "county centroid",
+  "address": "Seneca Co., NY"
+ },
+ ", Seneca, New York, USA": {
+  "lat": 42.71975,
+  "lon": -76.81795,
+  "precision": "county centroid",
+  "address": "Seneca Co., NY"
+ },
+ "Suffolk, New York, USA": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid",
+  "address": "Suffolk Co., NY"
+ },
+ "Chenango, New York, United States": {
+  "lat": 42.56245,
+  "lon": -75.5897,
+  "precision": "county centroid",
+  "address": "Chenango Co., NY"
+ },
+ ", Branch, Michigan, USA": {
+  "lat": 41.93485,
+  "lon": -85.07065,
+  "precision": "county centroid",
+  "address": "Branch Co., MI"
+ },
+ "Onondaga, Onondaga, New York, USA": {
+  "lat": 43.04095,
+  "lon": -76.15275,
+  "precision": "county centroid",
+  "address": "Onondaga Co., NY"
+ },
+ "Onondaga, NY": {
+  "lat": 43.04095,
+  "lon": -76.15275,
+  "precision": "county centroid",
+  "address": "Onondaga Co., NY"
+ },
+ "Valley, Armstrong, Pennsylvania, USA": {
+  "lat": 40.0971,
+  "lon": -75.4696,
+  "precision": "city (nearest named match)",
+  "address": "Valley, Armstrong Co., PA"
+ },
+ "Pq": {
+  "lat": 38.728695,
+  "lon": -9.150154,
+  "precision": "nominatim",
+  "address": "Parque, Avenida António Augusto de Aguiar, São Sebastião da Pedreira, Campo Pequeno, Avenidas Novas, Lisboa, 1050-214, Portugal"
+ },
+ "Montréal": {
+  "lat": 45.503182,
+  "lon": -73.569806,
+  "precision": "nominatim",
+  "address": "Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada"
+ },
+ "Oberkirchen, Departement de la Sarre (bis 1814), jetzt Kreis St Wendel, Saarland, Deutschland": {
+  "lat": 49.526778,
+  "lon": 7.259038,
+  "precision": "nominatim",
+  "address": "Oberkirchen, Freisen, Landkreis St. Wendel, Saarland, Deutschland"
+ },
+ "Alstonfield, Staffordshire, England": {
+  "lat": 53.101538,
+  "lon": -1.811144,
+  "precision": "nominatim",
+  "address": "Alstonfield Road, Hope, Alstonefield, Staffordshire Moorlands, Staffordshire, England, DE6 2FS, United Kingdom"
+ },
+ "Westerly, Rhode Island": {
+  "lat": 41.3691,
+  "lon": -71.8126,
+  "precision": "city",
+  "address": "Westerly, RI"
+ },
+ "Trumbull, Ohio, USA": {
+  "lat": 41.2639,
+  "lon": -80.7558,
+  "precision": "county centroid",
+  "address": "Trumbull Co., OH"
+ },
+ "Ware, Hampshire, Massachusetts": {
+  "lat": 42.2618,
+  "lon": -72.2583,
+  "precision": "city",
+  "address": "Ware, Hampshire Co., MA"
+ },
+ "Milston (Harlingen), Somerset, New Jersey, USA": {
+  "lat": 40.5696,
+  "lon": -74.61815,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Milston (Harlingen), Somerset Co., NJ"
+ },
+ "Somerset, NJ": {
+  "lat": 40.5696,
+  "lon": -74.61815,
+  "precision": "county centroid",
+  "address": "Somerset Co., NJ"
+ },
+ "Somerset, Niagara, New York, United States": {
+  "lat": 43.1851,
+  "lon": -78.8785,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Somerset, Niagara Co., NY"
+ },
+ "Monmouth County, New Jersey, USA": {
+  "lat": 40.2878,
+  "lon": -74.0714,
+  "precision": "county centroid",
+  "address": "Monmouth Co., NJ"
+ },
+ "Adams Township, Mass., Massachusetts, USA": {
+  "lat": 42.6223,
+  "lon": -73.1172,
+  "precision": "city",
+  "address": "Adams Township, MA"
+ },
+ "Adams, Berkshire, Massachusetts": {
+  "lat": 42.6223,
+  "lon": -73.1172,
+  "precision": "city",
+  "address": "Adams, Berkshire Co., MA"
+ },
+ "Derutor, New York, USA": null,
+ "DeRuyter, Madison, New York, USA": {
+  "lat": 42.894,
+  "lon": -75.6508,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "DeRuyter, Madison Co., NY"
+ },
+ "Eastbury, Hartford, Connecticut, United States": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Eastbury, Hartford Co., CT"
+ },
+ "Ulster County, New York, USA": {
+  "lat": 41.8752,
+  "lon": -74.1311,
+  "precision": "county centroid",
+  "address": "Ulster Co., NY"
+ },
+ "Marennes, Saintes, Saintonge, France": null,
+ "St-Enfant-Jésus-de-la-Pointe-aux-Trembles, Québec": null,
+ "Preston, Conn": {
+  "lat": 41.5224,
+  "lon": -71.9934,
+  "precision": "city",
+  "address": "Preston, CT"
+ },
+ "Danby, Rutland Cty, Vermont, USA": {
+  "lat": 43.3583,
+  "lon": -73.0129,
+  "precision": "city",
+  "address": "Danby, VT"
+ },
+ "Rhode Island, United States": {
+  "lat": 41.796241,
+  "lon": -71.599237,
+  "precision": "nominatim",
+  "address": "Rhode Island, United States"
+ },
+ "Rochester, MA, Massachusetts, USA": {
+  "lat": 41.7591,
+  "lon": -70.8523,
+  "precision": "city",
+  "address": "Rochester, MA"
+ },
+ ", Essex, New Jersey": {
+  "lat": 40.7664,
+  "lon": -74.2165,
+  "precision": "county centroid",
+  "address": "Essex Co., NJ"
+ },
+ "Somerset, Somerset, New Jersey, USA": {
+  "lat": 40.5696,
+  "lon": -74.61815,
+  "precision": "county centroid",
+  "address": "Somerset Co., NJ"
+ },
+ "Rhode Island, Rhode Island, USA": {
+  "lat": 41.55246,
+  "lon": -71.270455,
+  "precision": "nominatim",
+  "address": "Aquidneck Island, Portsmouth, Newport County, Rhode Island, United States"
+ },
+ "Adams, Berkshire, Massachusetts, United States": {
+  "lat": 42.6223,
+  "lon": -73.1172,
+  "precision": "city",
+  "address": "Adams, Berkshire Co., MA"
+ },
+ "Lee, Oneida, New York, USA": {
+  "lat": 43.3148,
+  "lon": -75.5055,
+  "precision": "city (nearest named match)",
+  "address": "Lee, Oneida Co., NY"
+ },
+ "Smithfield, Providence, British America, Rhode Island, USA": {
+  "lat": 41.8964,
+  "lon": -71.5207,
+  "precision": "city",
+  "address": "Smithfield, Providence Co., RI"
+ },
+ "Southold (Smithtown), Suffolk Co., Long Island, New York, USA": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Southold (Smithtown), Suffolk Co., NY"
+ },
+ "First Church Of Southold Or Presbyterian Church, Southold, Suffolk, New York": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "First Church Of Southold Or Presbyterian Church, Suffolk Co., NY"
+ },
+ "Baltimore, Maryland, United States": {
+  "lat": 39.41235,
+  "lon": -76.6262,
+  "precision": "county centroid",
+  "address": "Baltimore Co., MD"
+ },
+ "Somers, Tolland, Connecticut, United States": {
+  "lat": 41.9978,
+  "lon": -72.4583,
+  "precision": "city",
+  "address": "Somers, Tolland Co., CT"
+ },
+ "Canann, Litchfield, Connecticut": {
+  "lat": 41.7541,
+  "lon": -73.242,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Canann, Litchfield Co., CT"
+ },
+ "Ashfield, Franklin, Massachusetts, United States": {
+  "lat": 42.5232,
+  "lon": -72.811,
+  "precision": "city",
+  "address": "Ashfield, Franklin Co., MA"
+ },
+ "Amenia, Dutchess, New York, USA": {
+  "lat": 41.8447,
+  "lon": -73.5542,
+  "precision": "city",
+  "address": "Amenia, Dutchess Co., NY"
+ },
+ "Boucherville,Chambly,Quebec,Canada": {
+  "lat": 45.60502,
+  "lon": -73.452614,
+  "precision": "nominatim",
+  "address": "Boucherville, Agglomération de Longueuil, Montérégie, Québec, Canada"
+ },
+ "Longueuil,Chambly,Quebec,Canada": {
+  "lat": 45.521906,
+  "lon": -73.464458,
+  "precision": "nominatim",
+  "address": "Longueuil, Agglomération de Longueuil, Montérégie, Québec, Canada"
+ },
+ "Marennes, Rochefort, Saintonge, France": null,
+ "Laprairie,,Quebec,Canada": {
+  "lat": 45.482067,
+  "lon": -73.567606,
+  "precision": "nominatim",
+  "address": "Rue Laprairie, Pointe-Saint-Charles, Le Sud-Ouest, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3K 1C6, Canada"
+ },
+ "LAnge, , Quebec, Canada": {
+  "lat": 45.269218,
+  "lon": -72.130255,
+  "precision": "nominatim",
+  "address": "Rue Lange, Magog, Memphrémagog, Estrie, Québec, J1X 3Y5, Canada"
+ },
+ "Little Compton, Bristol County, Massachusetts": {
+  "lat": 41.7562,
+  "lon": -71.1026,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Little Compton, Bristol Co., MA"
+ },
+ "Bristol, Massachusetts, USA": {
+  "lat": 41.7562,
+  "lon": -71.1026,
+  "precision": "county centroid",
+  "address": "Bristol Co., MA"
+ },
+ "Voluntown, Windham, Connecticut": {
+  "lat": 41.5831,
+  "lon": -71.855,
+  "precision": "city",
+  "address": "Voluntown, Windham Co., CT"
+ },
+ "Plainfield, Connecticut, USA": {
+  "lat": 41.6775,
+  "lon": -71.922,
+  "precision": "city",
+  "address": "Plainfield, CT"
+ },
+ "Sherbourne": {
+  "lat": 43.672283,
+  "lon": -79.376394,
+  "precision": "nominatim",
+  "address": "Sherbourne, Sherbourne Station, North St.James Town, Downtown, Toronto, Golden Horseshoe, Ontario, M4X 1W4, Canada"
+ },
+ "Warwick, Kent, Colonial America, Rhode Island, USA": {
+  "lat": 41.70835,
+  "lon": -71.4123,
+  "precision": "city",
+  "address": "Warwick, Kent Co., RI"
+ },
+ "Worchester, Worchester, Massachusetts": null,
+ "Datteln, St. Amandus Katholisch, Wstfln, Prss": null,
+ "Bedford, Middlesex, Massachusetts, USA": {
+  "lat": 42.4843,
+  "lon": -71.2768,
+  "precision": "city",
+  "address": "Bedford, Middlesex Co., MA"
+ },
+ "Bergen, New Jersey": {
+  "lat": 40.9265,
+  "lon": -74.0556,
+  "precision": "county centroid",
+  "address": "Bergen Co., NJ"
+ },
+ "Yarmouth, Norfolk, England": {
+  "lat": 52.607174,
+  "lon": 1.731485,
+  "precision": "nominatim",
+  "address": "Great Yarmouth, Norfolk, England, NR30 2AH, United Kingdom"
+ },
+ "Mattituck, New York, USA": {
+  "lat": 40.9943,
+  "lon": -72.5363,
+  "precision": "city",
+  "address": "Mattituck, NY"
+ },
+ "Suffolk, New York": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid",
+  "address": "Suffolk Co., NY"
+ },
+ "Randolph, Norfolk, Massachusetts, Colonial America": {
+  "lat": 42.1736,
+  "lon": -71.0514,
+  "precision": "city",
+  "address": "Randolph, Norfolk Co., MA"
+ },
+ ",, Connecticut": {
+  "lat": 41.65002,
+  "lon": -72.734216,
+  "precision": "nominatim",
+  "address": "Connecticut, United States"
+ },
+ "Nottingham MM, Cecil Co., Maryland": {
+  "lat": 39.6045,
+  "lon": -75.9403,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Nottingham MM, Cecil Co., MD"
+ },
+ ", of Loudoun, Virginia": {
+  "lat": 39.042717,
+  "lon": -77.55123,
+  "precision": "nominatim",
+  "address": "Academies of Loudoun, 42075, Loudoun Academy Drive, Leesburg, Loudoun County, Virginia, 20175, United States"
+ },
+ "Middletown, Hartford, Colony of Connecticut, British Colonial America": {
+  "lat": 41.562318,
+  "lon": -72.650906,
+  "precision": "nominatim",
+  "address": "Middletown, Lower Connecticut River Valley Planning Region, Connecticut, United States"
+ },
+ "Plainfield, Windham, Connecticut": {
+  "lat": 41.6775,
+  "lon": -71.922,
+  "precision": "city",
+  "address": "Plainfield, Windham Co., CT"
+ },
+ "Southington, Hartford, Connecticut, USA": {
+  "lat": 41.6052,
+  "lon": -72.8727,
+  "precision": "city",
+  "address": "Southington, Hartford Co., CT"
+ },
+ "Southington, Hartford, Connecticut, United States": {
+  "lat": 41.6052,
+  "lon": -72.8727,
+  "precision": "city",
+  "address": "Southington, Hartford Co., CT"
+ },
+ "Connecticutt, USA": {
+  "lat": 41.107451,
+  "lon": -80.716316,
+  "precision": "nominatim",
+  "address": "Connecticutt Road, Wickliffe, Austintown Township, Mahoning County, Ohio, 44509, United States"
+ },
+ "Durkheim, Germany": {
+  "lat": 49.468724,
+  "lon": 8.113898,
+  "precision": "nominatim",
+  "address": "Landkreis Bad Dürkheim, Rheinland-Pfalz, Deutschland"
+ },
+ "Bordeaux, , Guyenne, France": {
+  "lat": 44.69205,
+  "lon": -0.087745,
+  "precision": "nominatim",
+  "address": "Rue du Petit Bordeaux, Résidence du Château d'eau, Sauveterre-de-Guyenne, Langon, Gironde, Nouvelle-Aquitaine, France métropolitaine, 33540, France"
+ },
+ "Saint Maclou, Rouen, Normandie, France": {
+  "lat": 49.365416,
+  "lon": 0.409274,
+  "precision": "nominatim",
+  "address": "Saint-Maclou, Bernay, Eure, Normandie, France métropolitaine, 27210, France"
+ },
+ "Plymouth, USA": {
+  "lat": 42.736912,
+  "lon": -96.221361,
+  "precision": "nominatim",
+  "address": "Plymouth County, Iowa, United States"
+ },
+ "Marshfield, Plymouth, Massachusetts": {
+  "lat": 42.1062,
+  "lon": -70.6993,
+  "precision": "city",
+  "address": "Marshfield, Plymouth Co., MA"
+ },
+ "Plymouth, Massachusetts, USA": {
+  "lat": 42.0399,
+  "lon": -70.8161,
+  "precision": "county centroid",
+  "address": "Plymouth Co., MA"
+ },
+ "Stonington, New London, CT, USA": {
+  "lat": 41.3664,
+  "lon": -71.9155,
+  "precision": "city",
+  "address": "Stonington, New London Co., CT"
+ },
+ "United States, USA": {
+  "lat": 38.893917,
+  "lon": -77.042653,
+  "precision": "nominatim",
+  "address": "United States National Park Service, 1849, C Street Northwest, Ward 2, Washington, District of Columbia, 20240, United States"
+ },
+ "Duxbury, Massachusetts, USA": {
+  "lat": 42.0052,
+  "lon": -70.70885,
+  "precision": "city",
+  "address": "Duxbury, MA"
+ },
+ "Virginia, USA": {
+  "lat": 37.123224,
+  "lon": -78.492772,
+  "precision": "nominatim",
+  "address": "Virginia, United States"
+ },
+ "New England": {
+  "lat": 44.205708,
+  "lon": -70.753784,
+  "precision": "nominatim",
+  "address": "New England, United States"
+ },
+ "Charlestown, Suffolk, Massachusetts": {
+  "lat": 42.3778,
+  "lon": -71.0627,
+  "precision": "city",
+  "address": "Charlestown, Suffolk Co., MA"
+ },
+ "Charlestown, Massachusetts": {
+  "lat": 42.3778,
+  "lon": -71.0627,
+  "precision": "city",
+  "address": "Charlestown, MA"
+ },
+ "Charlestown, Massachusetts Bay Colony, British Colonial Amer, Suffolk, England, United Kingdom": {
+  "lat": 50.332987,
+  "lon": -4.75776,
+  "precision": "nominatim",
+  "address": "Charlestown, Cornwall, England, PL25 3AJ, United Kingdom"
+ },
+ "Brooklyn, Kings, NY, USA": {
+  "lat": 40.6482,
+  "lon": -73.9517,
+  "precision": "city",
+  "address": "Brooklyn, Kings Co., NY"
+ },
+ "Bergen, Bergen County, New Jersey USA, USA": {
+  "lat": 40.967835,
+  "lon": -74.056325,
+  "precision": "nominatim",
+  "address": "Bergen County, New Jersey, United States"
+ },
+ "Bergen, Hudson, New Jersey,  Colonial America": {
+  "lat": 40.7328,
+  "lon": -74.0754,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Bergen, Hudson Co., NJ"
+ },
+ "Dartmouth, Bristol County, Province of Massachusetts, (Prese, Massachusetts, USA": {
+  "lat": 41.5766,
+  "lon": -71.0106,
+  "precision": "city",
+  "address": "Dartmouth, Bristol Co., MA"
+ },
+ "Providence, Rhode Island, USA": {
+  "lat": 41.849,
+  "lon": -71.4602,
+  "precision": "county centroid",
+  "address": "Providence Co., RI"
+ },
+ "Lynnfield, Essex, Massachusetts, USA": {
+  "lat": 42.5327,
+  "lon": -71.0339,
+  "precision": "city",
+  "address": "Lynnfield, Essex Co., MA"
+ },
+ "Swanton Morley, Norfolk, England": {
+  "lat": 52.708048,
+  "lon": 0.981583,
+  "precision": "nominatim",
+  "address": "Swanton Morley, Breckland, Norfolk, England, United Kingdom"
+ },
+ "New York, British Colonial America": {
+  "lat": 40.712728,
+  "lon": -74.006015,
+  "precision": "nominatim",
+  "address": "New York, United States"
+ },
+ "Southold,Suffolk,New York,USA": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, Suffolk Co., NY"
+ },
+ "Southhold, Suffolk, New York, United States": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Southhold, Suffolk Co., NY"
+ },
+ "First Church of Christ, New London, New London, Connecticut, USA": {
+  "lat": 41.4622,
+  "lon": -72.1062,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "First Church of Christ, New London Co., CT"
+ },
+ "Oysterponds, Cutchogue, Suffolk, New York, USA": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Oysterponds, Suffolk Co., NY"
+ },
+ "Hempstead, Long Island, New York, USA": {
+  "lat": 40.7062,
+  "lon": -73.6176,
+  "precision": "city",
+  "address": "Hempstead, NY"
+ },
+ "Braintree, Massachusetts, USA": {
+  "lat": 42.19465,
+  "lon": -71.04275,
+  "precision": "city",
+  "address": "Braintree, MA"
+ },
+ "Marlborough": {
+  "lat": 42.346859,
+  "lon": -71.552519,
+  "precision": "nominatim",
+  "address": "Marlborough, Middlesex County, Massachusetts, 01752, United States"
+ },
+ "Glastonbury, Connecticut,": {
+  "lat": 41.7073,
+  "lon": -72.5727,
+  "precision": "city",
+  "address": "Glastonbury, CT"
+ },
+ "East Hartford, Hartford, Connecticut": {
+  "lat": 41.78605,
+  "lon": -72.6684,
+  "precision": "city",
+  "address": "East Hartford, Hartford Co., CT"
+ },
+ "Glastonbury, CT": {
+  "lat": 41.7073,
+  "lon": -72.5727,
+  "precision": "city",
+  "address": "Glastonbury, CT"
+ },
+ "Sharon, Connecticut, USA": {
+  "lat": 41.8714,
+  "lon": -73.4578,
+  "precision": "city",
+  "address": "Sharon, CT"
+ },
+ "East Windsor, Hartford, Connecticut, USA": {
+  "lat": 41.9099,
+  "lon": -72.6029,
+  "precision": "city",
+  "address": "East Windsor, Hartford Co., CT"
+ },
+ "Hartford, Hartford, Conn., Connecticut, USA": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid",
+  "address": "Hartford Co., CT"
+ },
+ "Duxbury, Plymouth Co., MA, Massachusetts, USA": {
+  "lat": 42.0052,
+  "lon": -70.70885,
+  "precision": "city",
+  "address": "Duxbury, Plymouth Co., MA"
+ },
+ "Nottingham Monthly Meeting House, Chester, Pennsylvania": {
+  "lat": 39.9833,
+  "lon": -75.7288,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Nottingham Monthly Meeting House, Chester Co., PA"
+ },
+ "CT": {
+  "lat": 41.65002,
+  "lon": -72.734216,
+  "precision": "nominatim",
+  "address": "Connecticut, United States"
+ },
+ "Hadley, Hampshire, Massachusetts Bay, British America": {
+  "lat": 42.342326,
+  "lon": -72.589122,
+  "precision": "nominatim",
+  "address": "Hadley, Hampshire County, Massachusetts, 01035, United States"
+ },
+ "Windsor, Harford, Connecticut": {
+  "lat": 41.85435,
+  "lon": -72.6538,
+  "precision": "city",
+  "address": "Windsor, CT"
+ },
+ "Brouage, Saintes, Saintonge, France": null,
+ "Jauze, Mans, Maine, USA": null,
+ "St Jacques, Le Mans, Maine, USA": {
+  "lat": 44.025196,
+  "lon": -70.202744,
+  "precision": "nominatim",
+  "address": "Jacques Road, Auburn, Androscoggin County, Maine, 04210, United States"
+ },
+ "Luçon, Eure-et-Loir, Centre, France": {
+  "lat": 47.315716,
+  "lon": 2.237076,
+  "precision": "nominatim",
+  "address": "Lucon, Neuvy-sur-Barangeon, Vierzon, Cher, Centre-Val de Loire, France métropolitaine, 18330, France"
+ },
+ "La Rochelle, Aunis, Normandie, France": {
+  "lat": 49.248768,
+  "lon": -0.84227,
+  "precision": "nominatim",
+  "address": "La Rochelle, Le Breuil-en-Bessin, Bayeux, Calvados, Normandie, France métropolitaine, 14330, France"
+ },
+ "Shoreditch, London, , England": {
+  "lat": 51.526669,
+  "lon": -0.079893,
+  "precision": "nominatim",
+  "address": "Shoreditch, London Borough of Hackney, Greater London, England, EC2A 3AR, United Kingdom"
+ },
+ "Plymouth, N E": {
+  "lat": 43.799922,
+  "lon": -66.012466,
+  "precision": "nominatim",
+  "address": "Plymouth, Argyle Municipal District, Yarmouth County, Nova Scotia, Canada"
+ },
+ "Newbury, Essex County, Massachusetts, United States of America": {
+  "lat": 42.7553,
+  "lon": -70.8496,
+  "precision": "city",
+  "address": "Newbury, Essex Co., MA"
+ },
+ "Rehoboth, Bristol Co., MA, USA": {
+  "lat": 41.8515,
+  "lon": -71.2545,
+  "precision": "city",
+  "address": "Rehoboth, Bristol Co., MA"
+ },
+ "Stonington, New London Co., CT, USA": {
+  "lat": 41.3664,
+  "lon": -71.9155,
+  "precision": "city",
+  "address": "Stonington, New London Co., CT"
+ },
+ "Hingham, Mass": {
+  "lat": 42.23315,
+  "lon": -70.89045,
+  "precision": "city",
+  "address": "Hingham, MA"
+ },
+ "Sudbury, Massachusetts, USA": {
+  "lat": 42.3837,
+  "lon": -71.4282,
+  "precision": "city",
+  "address": "Sudbury, MA"
+ },
+ "New London, Connecticut, USA": {
+  "lat": 41.4622,
+  "lon": -72.1062,
+  "precision": "county centroid",
+  "address": "New London Co., CT"
+ },
+ "Medfield": {
+  "lat": 42.186561,
+  "lon": -71.30546,
+  "precision": "nominatim",
+  "address": "Medfield, Norfolk County, Massachusetts, 02052, United States"
+ },
+ "Sherborn": {
+  "lat": 42.239784,
+  "lon": -71.370142,
+  "precision": "nominatim",
+  "address": "Sherborn, Middlesex County, Massachusetts, 01770, United States"
+ },
+ "Haverhill, Mass": {
+  "lat": 42.77515,
+  "lon": -71.0969,
+  "precision": "city",
+  "address": "Haverhill, MA"
+ },
+ "RI": {
+  "lat": 41.796241,
+  "lon": -71.599237,
+  "precision": "nominatim",
+  "address": "Rhode Island, United States"
+ },
+ "Salem, Essex, MA": {
+  "lat": 42.57525,
+  "lon": -70.8897,
+  "precision": "city",
+  "address": "Salem, Essex Co., MA"
+ },
+ "Roxbury, Suffolk, MA": {
+  "lat": 42.3251,
+  "lon": -71.0953,
+  "precision": "city",
+  "address": "Roxbury, Suffolk Co., MA"
+ },
+ "Warwick, Colony of Rhode Island and Providence Plantations, British Colonial America": {
+  "lat": 41.699272,
+  "lon": -71.458611,
+  "precision": "nominatim",
+  "address": "Warwick, Kent County, Rhode Island, United States"
+ },
+ "Kent, Rhode Island, United States": {
+  "lat": 41.7004,
+  "lon": -71.474,
+  "precision": "county centroid",
+  "address": "Kent Co., RI"
+ },
+ "Salisbury, Wiltshire, England, United Kingdom": {
+  "lat": 51.069061,
+  "lon": -1.795413,
+  "precision": "nominatim",
+  "address": "Salisbury, Wiltshire, England, United Kingdom"
+ },
+ "St Martin, Westminster, London, London, England, United Kingdom": {
+  "lat": 50.072511,
+  "lon": -5.166348,
+  "precision": "nominatim",
+  "address": "St. Martin-in-Meneage, Cornwall, England, United Kingdom"
+ },
+ "Westerly, Washington, RI, USA": {
+  "lat": 41.3691,
+  "lon": -71.8126,
+  "precision": "city",
+  "address": "Westerly, Washington Co., RI"
+ },
+ "Weymouth, Norfolk, Massachusetts, United States": {
+  "lat": 42.2113,
+  "lon": -70.9582,
+  "precision": "city",
+  "address": "Weymouth, Norfolk Co., MA"
+ },
+ "Lebanon, New London County, Connecticut, United States of America": {
+  "lat": 41.633,
+  "lon": -72.244,
+  "precision": "city",
+  "address": "Lebanon, New London Co., CT"
+ },
+ "Barnstable, Barnstable, MA": {
+  "lat": 41.6862,
+  "lon": -70.2967,
+  "precision": "county centroid",
+  "address": "Barnstable Co., MA"
+ },
+ "Mansfield, Tolland, Connecticut, USA": {
+  "lat": 41.78455,
+  "lon": -72.2538,
+  "precision": "city (nearest named match)",
+  "address": "Mansfield, Tolland Co., CT"
+ },
+ "Weymouth, Norfolk, Massachusetts, USA": {
+  "lat": 42.2113,
+  "lon": -70.9582,
+  "precision": "city",
+  "address": "Weymouth, Norfolk Co., MA"
+ },
+ "Charlestown End, Middlesex, Massachusetts, United States": {
+  "lat": 42.4464,
+  "lon": -71.2384,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Charlestown End, Middlesex Co., MA"
+ },
+ "St. Mary's Church, Colchester, Essex, England": {
+  "lat": 51.481456,
+  "lon": 0.369445,
+  "precision": "nominatim",
+  "address": "St Mary's Church, Linford Road, Little Thurrock, Chadwell St Mary, Thurrock, Essex, England, RM16 4JW, United Kingdom"
+ },
+ "Waloon Church, Leiden, South Holland, Netherlands": null,
+ "Cathedral, Kalmar, Sweden": null,
+ "New Hampshire, United States": {
+  "lat": 43.484913,
+  "lon": -71.655399,
+  "precision": "nominatim",
+  "address": "New Hampshire, United States"
+ },
+ "EN": {
+  "lat": 46.065238,
+  "lon": 5.284772,
+  "precision": "nominatim",
+  "address": "Ain, Auvergne-Rhône-Alpes, France métropolitaine, France"
+ },
+ "Burnham on Crouch, Crixsey, Essex, England": {
+  "lat": 51.635522,
+  "lon": 0.845936,
+  "precision": "nominatim",
+  "address": "Burnham-on-Crouch, Maldon, Essex, England, United Kingdom"
+ },
+ "Dorchester, Holy Trinity, Dorset, England": {
+  "lat": 50.713206,
+  "lon": -2.437123,
+  "precision": "nominatim",
+  "address": "Dorchester, Dorset, England, United Kingdom"
+ },
+ "of Plymouth, Devon, England": {
+  "lat": 50.434398,
+  "lon": -4.10196,
+  "precision": "nominatim",
+  "address": "Bickleigh Down Church of England Primary School, School Drive, Woolwell, Bickleigh, Roborough, Plymouth, Devon, Devon and Torbay, England, PL6 7JW, United Kingdom"
+ },
+ "Gloucestershhire, England": null,
+ "Upper Slaughter, Gloucestershire, England": {
+  "lat": 51.910939,
+  "lon": -1.770236,
+  "precision": "nominatim",
+  "address": "Upper Slaughter, Cotswold, Gloucestershire, England, United Kingdom"
+ },
+ "Chelsea, Suffolk County, Massachusetts, United States of America": {
+  "lat": 42.3963,
+  "lon": -71.0325,
+  "precision": "city",
+  "address": "Chelsea, Suffolk Co., MA"
+ },
+ "Hatherup, Gloucester, Gloucestershire, England, United Kingdom": null,
+ "Charlestown, Middlesex, MA, Massachusetts, USA": {
+  "lat": 42.3778,
+  "lon": -71.0627,
+  "precision": "city",
+  "address": "Charlestown, Middlesex Co., MA"
+ },
+ "Nieuw Amsterdam-New Netherlands": {
+  "lat": 40.764322,
+  "lon": -73.972521,
+  "precision": "nominatim",
+  "address": "Sherry Netherlands, East 59th Street, Manhattan Community Board 8, Manhattan, New York County, New York, 10153, United States"
+ },
+ "Salem, Essex, Massachusetts Bay, Colonial America": {
+  "lat": 44.939157,
+  "lon": -123.033121,
+  "precision": "nominatim",
+  "address": "Salem, Marion County, Oregon, United States"
+ },
+ "Saxlingham, Hingham, Norfolk, England": {
+  "lat": 52.915847,
+  "lon": 1.011163,
+  "precision": "nominatim",
+  "address": "Saxlingham, North Norfolk, Norfolk, England, NR25 7JZ, United Kingdom"
+ },
+ "Southold, Suffolk Co., NY": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, Suffolk Co., NY"
+ },
+ "Southold, Suffolk Co Long Island, NY": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, NY"
+ },
+ "Southampton, Suffolk, New York, USA": {
+  "lat": 40.8943,
+  "lon": -72.3999,
+  "precision": "city",
+  "address": "Southampton, Suffolk Co., NY"
+ },
+ "Middlesex County, New Jersey": {
+  "lat": 40.4862,
+  "lon": -74.4173,
+  "precision": "county centroid",
+  "address": "Middlesex Co., NJ"
+ },
+ "Southhold, Suffolk County, Long Island, New York": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Southhold, Suffolk Co., NY"
+ },
+ "Preston, New London, Connecticut": {
+  "lat": 41.5224,
+  "lon": -71.9934,
+  "precision": "city",
+  "address": "Preston, New London Co., CT"
+ },
+ "Preston City, New London, Connecticut Colony, United States of America": {
+  "lat": 41.528437,
+  "lon": -71.975535,
+  "precision": "nominatim",
+  "address": "Preston City, Preston, Southeastern Connecticut Planning Region, Connecticut, 06365, United States"
+ },
+ ",, Massachusetts, USA": {
+  "lat": 42.378877,
+  "lon": -72.032366,
+  "precision": "nominatim",
+  "address": "Massachusetts, United States"
+ },
+ "Dedham, Massachusetts, USA": {
+  "lat": 42.21185,
+  "lon": -71.12645,
+  "precision": "city",
+  "address": "Dedham, MA"
+ },
+ "Dedham, Massachusetts Bay, British Colonial America, Massachusetts, USA": {
+  "lat": 42.21185,
+  "lon": -71.12645,
+  "precision": "city",
+  "address": "Dedham, MA"
+ },
+ "Nassau, Long Island, New York": {
+  "lat": 40.7448,
+  "lon": -73.9487,
+  "precision": "city (nearest named match)",
+  "address": "Long Island, Nassau Co., NY"
+ },
+ "Nassau, Long Island, NY": {
+  "lat": 40.7448,
+  "lon": -73.9487,
+  "precision": "city (nearest named match)",
+  "address": "Long Island, Nassau Co., NY"
+ },
+ "Marlborough, Middlesex, Massachusetts, USA": {
+  "lat": 42.3509,
+  "lon": -71.5434,
+  "precision": "city",
+  "address": "Marlborough, Middlesex Co., MA"
+ },
+ "Hartford, Connecticut, Colonial America": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid",
+  "address": "Hartford Co., CT"
+ },
+ "Gill, Massachusetts": {
+  "lat": 42.6404,
+  "lon": -72.4995,
+  "precision": "city",
+  "address": "Gill, MA"
+ },
+ "Hockanum, Hartford Co, Connecticut": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Hockanum, Hartford Co., CT"
+ },
+ "Watertown, Massachusetts, USA": {
+  "lat": 42.3709,
+  "lon": -71.1828,
+  "precision": "city",
+  "address": "Watertown, MA"
+ },
+ "Saybrook, Middlesex, Connecticut": {
+  "lat": 41.4682,
+  "lon": -72.528,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Saybrook, Middlesex Co., CT"
+ },
+ "Westfield, Hampden, Massachusetts, USA": {
+  "lat": 42.14925,
+  "lon": -72.79875,
+  "precision": "city",
+  "address": "Westfield, Hampden Co., MA"
+ },
+ "Clitheroe, Whalley, Lancashire, England": {
+  "lat": 53.871747,
+  "lon": -2.392678,
+  "precision": "nominatim",
+  "address": "Clitheroe, Waddington, Ribble Valley, Lancashire, England, United Kingdom"
+ },
+ "Somerset, England": {
+  "lat": 51.161751,
+  "lon": -3.075387,
+  "precision": "nominatim",
+  "address": "Somerset, England, United Kingdom"
+ },
+ "Roxbury, Massachusetts": {
+  "lat": 42.3251,
+  "lon": -71.0953,
+  "precision": "city",
+  "address": "Roxbury, MA"
+ },
+ "Northampton, Massachusetts Bay, British America": {
+  "lat": 40.745136,
+  "lon": -75.32893,
+  "precision": "nominatim",
+  "address": "Northampton County, Pennsylvania, United States"
+ },
+ "Wethersfield Twp., Hartford County, Connecticut, USA": {
+  "lat": 41.74655,
+  "lon": -72.69755,
+  "precision": "city",
+  "address": "Wethersfield Twp, Hartford Co., CT"
+ },
+ "Roxbury, Suffolk Co. MA": {
+  "lat": 42.328907,
+  "lon": -71.085085,
+  "precision": "nominatim",
+  "address": "Roxbury, Boston, Suffolk County, Massachusetts, 02119, United States"
+ },
+ "New Kent Co., VA": {
+  "lat": 37.4617,
+  "lon": -77.0436,
+  "precision": "county centroid",
+  "address": "New Kent Co., VA"
+ },
+ "Charente, , Maritime, France": {
+  "lat": 45.94449,
+  "lon": -0.892337,
+  "precision": "nominatim",
+  "address": "Tonnay-Charente, Rochefort, Charente-Maritime, Nouvelle-Aquitaine, France métropolitaine, 17430, France"
+ },
+ "Perche, Orne, Basse-Normandie, France": {
+  "lat": 48.505934,
+  "lon": 0.628533,
+  "precision": "nominatim",
+  "address": "La cabane du Perche, La Malotière, Les Prés d'Assite, Saint-Mard-de-Réno, Mortagne-au-Perche, Orne, Normandie, France métropolitaine, 61400, France"
+ },
+ "Probably In Roxbury, Mass": null,
+ "Mystic, New London County, Connecticut, United States of America": {
+  "lat": 41.3616,
+  "lon": -71.9774,
+  "precision": "city",
+  "address": "Mystic, New London Co., CT"
+ },
+ "Wayland, Middlesex County, Massachusetts, United States of America": {
+  "lat": 42.3486,
+  "lon": -71.3588,
+  "precision": "city",
+  "address": "Wayland, Middlesex Co., MA"
+ },
+ "Sudbury.Middlesex, Massachusetts, USA": {
+  "lat": 42.383428,
+  "lon": -71.416173,
+  "precision": "nominatim",
+  "address": "Sudbury, Middlesex County, Massachusetts, 01776, United States"
+ },
+ "Boltonsborough, Somerset, England": null,
+ "Saint Mary Magdalene Old Fish Street,London,London,England": null,
+ "St Giles Cripplegate, London, England": {
+  "lat": 51.518707,
+  "lon": -0.093834,
+  "precision": "nominatim",
+  "address": "St Giles-without-Cripplegate, St Giles' Terrace, Barbican Estate, Barbican, City of London, Greater London, England, EC2Y 8DU, United Kingdom"
+ },
+ "En": {
+  "lat": 46.065238,
+  "lon": 5.284772,
+  "precision": "nominatim",
+  "address": "Ain, Auvergne-Rhône-Alpes, France métropolitaine, France"
+ },
+ "Waltham, Essex, England": {
+  "lat": 51.680501,
+  "lon": 0.033099,
+  "precision": "nominatim",
+  "address": "Waltham Abbey, Epping Forest, Essex, England, United Kingdom"
+ },
+ "Prob. Waltham, Essex, England": null,
+ "MA": {
+  "lat": 42.378877,
+  "lon": -72.032366,
+  "precision": "nominatim",
+  "address": "Massachusetts, United States"
+ },
+ "Great Waltham,Essex,England": {
+  "lat": 51.817932,
+  "lon": 0.449001,
+  "precision": "nominatim",
+  "address": "Great Waltham, Howe Street, Chelmsford, Essex, England, United Kingdom"
+ },
+ "Es": {
+  "lat": 39.326068,
+  "lon": -4.837979,
+  "precision": "nominatim",
+  "address": "España"
+ },
+ "Essex County, Massachusetts, USA": {
+  "lat": 42.6472,
+  "lon": -70.9612,
+  "precision": "county centroid",
+  "address": "Essex Co., MA"
+ },
+ "Providence, Providence, Rhode Island Colony": {
+  "lat": 41.829144,
+  "lon": -71.408686,
+  "precision": "nominatim",
+  "address": "Old State House, South Court Street, College Hill, Providence, Providence County, Rhode Island, 02903, United States"
+ },
+ "Of Nyland, Somerset, England": null,
+ "Salem, Essex, Massachusetts Bay Colony": null,
+ "Britsh Colony of America": null,
+ "Kittery, Maine Colony, British Colonial America": {
+  "lat": 43.085672,
+  "lon": -70.743658,
+  "precision": "nominatim",
+  "address": "Kittery, York County, Maine, United States"
+ },
+ "Yarmouth, Barnstable, MA": {
+  "lat": 41.7051,
+  "lon": -70.227,
+  "precision": "city (nearest named match)",
+  "address": "Yarmouth, Barnstable Co., MA"
+ },
+ "USA": {
+  "lat": 39.78373,
+  "lon": -100.445882,
+  "precision": "nominatim",
+  "address": "United States"
+ },
+ "Netherlands, Pays-Bas": {
+  "lat": 52.243498,
+  "lon": 5.634323,
+  "precision": "nominatim",
+  "address": "Nederland"
+ },
+ "Newtown (now Long Island City), Queens, New York Colony": null,
+ "London, Middlesex, London, England, United Kingdom": {
+  "lat": 51.507446,
+  "lon": -0.127765,
+  "precision": "nominatim",
+  "address": "Greater London, England, United Kingdom"
+ },
+ "Westbere, Kent, England": {
+  "lat": 51.308149,
+  "lon": 1.144101,
+  "precision": "nominatim",
+  "address": "Westbere, Canterbury, Kent, England, United Kingdom"
+ },
+ "Southold, Colony of New York, British Colonial America, Suffolk, England, United Kingdom": {
+  "lat": 51.429623,
+  "lon": 0.055382,
+  "precision": "nominatim",
+  "address": "Southold Rise, Edgebury, Coldharbour, Royal Borough of Greenwich, Greater London, England, SE9 3BE, United Kingdom"
+ },
+ "New Haven, Connecticut, USA": {
+  "lat": 41.3657,
+  "lon": -72.9282,
+  "precision": "county centroid",
+  "address": "New Haven Co., CT"
+ },
+ "Mowsley,  Leicestershire,  ,  England": {
+  "lat": 52.490809,
+  "lon": -1.05041,
+  "precision": "nominatim",
+  "address": "Mowsley, Harborough, Leicestershire, England, United Kingdom"
+ },
+ "Mowsley, Leicestershire, England": {
+  "lat": 52.490809,
+  "lon": -1.05041,
+  "precision": "nominatim",
+  "address": "Mowsley, Harborough, Leicestershire, England, United Kingdom"
+ },
+ "Southhold, Suffolk County, New York, USA": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Southhold, Suffolk Co., NY"
+ },
+ "Long Island City, Queens, New York City, New York, USA": {
+  "lat": 40.7448,
+  "lon": -73.9487,
+  "precision": "city",
+  "address": "Long Island City, Queens Co., NY"
+ },
+ "Southold, Long Island, New York": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, NY"
+ },
+ "Ipswich, Suffolk, , England": {
+  "lat": 52.057932,
+  "lon": 1.15281,
+  "precision": "nominatim",
+  "address": "Ipswich, Suffolk, England, IP1 1DD, United Kingdom"
+ },
+ "Yarmouth, Barnstable, Massachusetts Bay Colony, Colonial British America": null,
+ "Ndg": {
+  "lat": 47.233351,
+  "lon": 123.913418,
+  "precision": "nominatim",
+  "address": "齐齐哈尔三家子机场, 卜奎南大街, 大民街道, 龙沙区, 齐齐哈尔市, 黑龙江省, 161000, 中国"
+ },
+ "Weymouth, Suffolk, England": {
+  "lat": 52.056516,
+  "lon": 1.177607,
+  "precision": "nominatim",
+  "address": "Weymouth Road, California, Ipswich, Suffolk, England, IP4 5BB, United Kingdom"
+ },
+ "of Weymouth,Suffolk,Massachusetts": {
+  "lat": 42.35,
+  "lon": -71.0599,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "of Weymouth, Suffolk Co., MA"
+ },
+ "Southold, Suffolk, Province of New York, British Colonial Am, New York, USA": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, Suffolk Co., NY"
+ },
+ "Lo": {
+  "lat": 45.26131,
+  "lon": 9.491678,
+  "precision": "nominatim",
+  "address": "Lodi, Lombardia, Italia"
+ },
+ "Newark, Essex, NJ": {
+  "lat": 40.7357,
+  "lon": -74.18235,
+  "precision": "city",
+  "address": "Newark, Essex Co., NJ"
+ },
+ "Philadelphia, Pennsylvania": {
+  "lat": 40.0018,
+  "lon": -75.14575,
+  "precision": "county centroid",
+  "address": "Philadelphia Co., PA"
+ },
+ "Southhold, Suffolk, Long Island, New York": {
+  "lat": 40.8428,
+  "lon": -73.0352,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Southhold, Suffolk Co., NY"
+ },
+ "Southold, Suffolk Co, New York": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, Suffolk Co., NY"
+ },
+ "Saint Mary Bredin,Canterbury,Kent,England": null,
+ "Preston, New London, Ct., USA": {
+  "lat": 41.5224,
+  "lon": -71.9934,
+  "precision": "city",
+  "address": "Preston, New London Co., CT"
+ },
+ "Rutherford County, North Carolina, USA": {
+  "lat": 35.3344,
+  "lon": -81.846,
+  "precision": "county centroid",
+  "address": "Rutherford Co., NC"
+ },
+ "Iowa, United States": {
+  "lat": 41.921673,
+  "lon": -93.31227,
+  "precision": "nominatim",
+  "address": "Iowa, United States"
+ },
+ "Norfolk, Norfolk, Massachusetts, America": {
+  "lat": 42.1868,
+  "lon": -71.1637,
+  "precision": "county centroid",
+  "address": "Norfolk Co., MA"
+ },
+ "Braintree, Norfolk County, Province of Massachusetts Bay": null,
+ "Taunton, Bristol, Massachusetts, United States": {
+  "lat": 41.8306,
+  "lon": -71.08485,
+  "precision": "city",
+  "address": "Taunton, Bristol Co., MA"
+ },
+ "Dedham,Massachusetts": {
+  "lat": 42.21185,
+  "lon": -71.12645,
+  "precision": "city",
+  "address": "Dedham, MA"
+ },
+ "Of Little, Compton, Newport, Ri": {
+  "lat": 41.522,
+  "lon": -71.2841,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Of Little, Newport Co., RI"
+ },
+ "Duxbury, Plymouth, MA": {
+  "lat": 42.0052,
+  "lon": -70.70885,
+  "precision": "city",
+  "address": "Duxbury, Plymouth Co., MA"
+ },
+ "Gravesend, Livingston, New York, USA": {
+  "lat": 42.7938,
+  "lon": -77.7996,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Gravesend, Livingston Co., NY"
+ },
+ "Gravesend, Kings, New York, USA": {
+  "lat": 40.6497,
+  "lon": -73.9498,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Gravesend, Kings Co., NY"
+ },
+ "Kings County, NY": {
+  "lat": 40.6497,
+  "lon": -73.9498,
+  "precision": "county centroid",
+  "address": "Kings Co., NY"
+ },
+ "Jamaica, Lewis, New York Colony": null,
+ "Jamaica, Long Island, New England, USA": {
+  "lat": 41.84606,
+  "lon": -94.308149,
+  "precision": "nominatim",
+  "address": "Jamaica, Richland Township, Guthrie County, Iowa, United States"
+ },
+ "Hempstead, Queens, New York, United States": {
+  "lat": 40.7062,
+  "lon": -73.6176,
+  "precision": "city",
+  "address": "Hempstead, Queens Co., NY"
+ },
+ "Staten Island, New York": {
+  "lat": 40.6006,
+  "lon": -74.147,
+  "precision": "city",
+  "address": "Staten Island, NY"
+ },
+ "Hempstead, Queens, New York, USA": {
+  "lat": 40.7062,
+  "lon": -73.6176,
+  "precision": "city",
+  "address": "Hempstead, Queens Co., NY"
+ },
+ "Braintree, Norfolk, Massachusetts Bay Colony": null,
+ "Lynn, Essex, Massachusetts Bay Colony": null,
+ "Burlington, New Jersey": {
+  "lat": 40.00905,
+  "lon": -74.7834,
+  "precision": "county centroid",
+  "address": "Burlington Co., NJ"
+ },
+ "Lyme, Connecticut, USA": {
+  "lat": 41.394496,
+  "lon": -72.351035,
+  "precision": "nominatim",
+  "address": "Lyme, Lower Connecticut River Valley Planning Region, Connecticut, United States"
+ },
+ "Hingham, Massachusetts": {
+  "lat": 42.23315,
+  "lon": -70.89045,
+  "precision": "city",
+  "address": "Hingham, MA"
+ },
+ "Braintree, Massachusetts (Recd. in Boston)": null,
+ "Boston, Massachusetts, USA": {
+  "lat": 42.3576,
+  "lon": -71.0598,
+  "precision": "city",
+  "address": "Boston, MA"
+ },
+ "Dorchester, Suffolk, Massachusetts Colony": {
+  "lat": 42.321995,
+  "lon": -71.052135,
+  "precision": "nominatim",
+  "address": "Old Colony Avenue, Dorchester, Boston, Suffolk County, Massachusetts, 01125, United States"
+ },
+ "Of Yonkers, Westchester, New York": {
+  "lat": 41.0897,
+  "lon": -73.7924,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Of Yonkers, Westchester Co., NY"
+ },
+ "Braintree, Norfolk, Massachusetts Colony": {
+  "lat": 42.320568,
+  "lon": -71.052273,
+  "precision": "nominatim",
+  "address": "JFK/UMass - Red Line - Alewife/Braintree, Old Colony Avenue, Dorchester, Boston, Suffolk County, Massachusetts, 01125, United States"
+ },
+ "Fife: Dunfermline - Parish Register, 1561-1700 (May 1642-March 1653)": null,
+ "London England": {
+  "lat": 51.507446,
+  "lon": -0.127765,
+  "precision": "nominatim",
+  "address": "Greater London, England, United Kingdom"
+ },
+ "Westminster, London, England": {
+  "lat": 51.500444,
+  "lon": -0.12654,
+  "precision": "nominatim",
+  "address": "Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom"
+ },
+ "Mass, Colony": {
+  "lat": 11.375786,
+  "lon": 75.806788,
+  "precision": "nominatim",
+  "address": "mass super market, Aquaduct- Pavandoor Road, Odumbramala Colony, Kozhikode, Kerala, 673616, India"
+ },
+ "Holborn, London, United Kingdom": {
+  "lat": 51.519598,
+  "lon": -0.113727,
+  "precision": "nominatim",
+  "address": "Holborn, London Borough of Camden, Greater London, England, WC1R 5AH, United Kingdom"
+ },
+ "Broadway, Somerset, England, United Kingdom": {
+  "lat": 52.035382,
+  "lon": -1.861861,
+  "precision": "nominatim",
+  "address": "Broadway, Wychavon, Worcestershire, England, United Kingdom"
+ },
+ "Hardington, Mandeville, England": {
+  "lat": 50.912713,
+  "lon": -2.692046,
+  "precision": "nominatim",
+  "address": "Hardington Moor National Nature Reserve, Hardington Mandeville, West Coker, Somerset, England, United Kingdom"
+ },
+ "Hartford, Hartford, Colony, Connecticut": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid",
+  "address": "Hartford Co., CT"
+ },
+ "Massachusetts Bay Colony, British Colonial America": null,
+ "Hadley, Hampden County, Massachusetts, USA": {
+  "lat": 42.3606,
+  "lon": -72.5715,
+  "precision": "city",
+  "address": "Hadley, Hampden Co., MA"
+ },
+ "Hadley, Hampshire Co., Massachusetts": {
+  "lat": 42.3606,
+  "lon": -72.5715,
+  "precision": "city",
+  "address": "Hadley, Hampshire Co., MA"
+ },
+ "Farmington, Connecticut, USA": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "city",
+  "address": "Farmington, CT"
+ },
+ "Roxbury, Suffolk, Massachusetts, British Colonial America": {
+  "lat": 42.3251,
+  "lon": -71.0953,
+  "precision": "city",
+  "address": "Roxbury, Suffolk Co., MA"
+ },
+ "Roxbury, Litchfield, Connecticut, British Colonial America": {
+  "lat": 41.5509,
+  "lon": -73.2993,
+  "precision": "city",
+  "address": "Roxbury, Litchfield Co., CT"
+ },
+ "Layton, Essex, England": null,
+ "East Haddam, Middlesex, (or Hartford), Connecticut, United States": {
+  "lat": 41.4696,
+  "lon": -72.4059,
+  "precision": "city",
+  "address": "East Haddam, Middlesex Co., CT"
+ },
+ "Wethersfield, Hartford Co., Connecticut, USA": {
+  "lat": 41.74655,
+  "lon": -72.69755,
+  "precision": "city",
+  "address": "Wethersfield, Hartford Co., CT"
+ },
+ "Weathersfield, Hartford, Connecticut": {
+  "lat": 41.7918,
+  "lon": -72.7188,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Weathersfield, Hartford Co., CT"
+ },
+ "Weymouth, Norfork, Massachusetts": {
+  "lat": 42.2113,
+  "lon": -70.9582,
+  "precision": "city",
+  "address": "Weymouth, MA"
+ },
+ "Boston, Middlesex County, Massachusetts": {
+  "lat": 42.3576,
+  "lon": -71.0598,
+  "precision": "city",
+  "address": "Boston, Middlesex Co., MA"
+ },
+ "High Ongar, Essex, England": {
+  "lat": 51.705553,
+  "lon": 0.28721,
+  "precision": "nominatim",
+  "address": "High Ongar, Epping Forest, Essex, England, United Kingdom"
+ },
+ "Windsor, Connecticut": {
+  "lat": 41.85435,
+  "lon": -72.6538,
+  "precision": "city",
+  "address": "Windsor, CT"
+ },
+ "London, London, England, United Kingdom": {
+  "lat": 51.507446,
+  "lon": -0.127765,
+  "precision": "nominatim",
+  "address": "Greater London, England, United Kingdom"
+ },
+ "England or CT, Wethersfield": null,
+ "Farfield, Conn": {
+  "lat": 41.490243,
+  "lon": -73.465903,
+  "precision": "nominatim",
+  "address": "New Farfield Town Beach, Knollcrest, New Fairfield, Western Connecticut Planning Region, Connecticut, United States"
+ },
+ "Kings Stanley, Gloucestershire, England": {
+  "lat": 51.729198,
+  "lon": -2.273707,
+  "precision": "nominatim",
+  "address": "Kings Stanley, Stroud, Gloucestershire, England, GL10 3JU, United Kingdom"
+ },
+ "St Helens, Bishopsgate, London, England": {
+  "lat": 51.634831,
+  "lon": 0.010023,
+  "precision": "nominatim",
+  "address": "St Helens, 9, Forest View, Chingford, London Borough of Waltham Forest, Greater London, England, E4 7AY, United Kingdom"
+ },
+ "Northampton, Hampshire, Massachusetts, Colonial America": {
+  "lat": 42.3223,
+  "lon": -72.636,
+  "precision": "city",
+  "address": "Northampton, Hampshire Co., MA"
+ },
+ "Northampton, Hampshire, Massachusetts": {
+  "lat": 42.3223,
+  "lon": -72.636,
+  "precision": "city",
+  "address": "Northampton, Hampshire Co., MA"
+ },
+ "St. Nicholas Parish, London, England": {
+  "lat": 54.281436,
+  "lon": -0.399228,
+  "precision": "nominatim",
+  "address": "London Inn Yard, St Nicholas Cliff, The Old Town, Scarborough, North Yorkshire, York and North Yorkshire, England, YO11 2EP, United Kingdom"
+ },
+ "Rowley, Essex, Colonial  Massachusetts": {
+  "lat": 42.7138,
+  "lon": -70.907,
+  "precision": "city",
+  "address": "Rowley, Essex Co., MA"
+ },
+ "Rowley, Massachusetts, USA": {
+  "lat": 42.7138,
+  "lon": -70.907,
+  "precision": "city",
+  "address": "Rowley, MA"
+ },
+ "Westgate, Kent, , England": {
+  "lat": 51.381577,
+  "lon": 1.337211,
+  "precision": "nominatim",
+  "address": "Westgate-on-Sea, Birchington, Thanet, Kent, England, United Kingdom"
+ },
+ "St Brides Church, London, , England": {
+  "lat": 51.513783,
+  "lon": -0.105505,
+  "precision": "nominatim",
+  "address": "St Brides, St. Bride's Avenue, West Smithfield, Blackfriars, City of London, Greater London, England, EC4Y 8AU, United Kingdom"
+ },
+ "Halifax, West Riding, Yorkshire, England": {
+  "lat": 53.722923,
+  "lon": -1.860487,
+  "precision": "nominatim",
+  "address": "Halifax, Calderdale, West Yorkshire, England, HX1 1TH, United Kingdom"
+ },
+ "Braintree, Norfolk, Massachusetts, British Colonial America": {
+  "lat": 42.19465,
+  "lon": -71.04275,
+  "precision": "city",
+  "address": "Braintree, Norfolk Co., MA"
+ },
+ "Gloucester, Essex, Massachusetts, British Colonial America": {
+  "lat": 42.61835,
+  "lon": -70.66705,
+  "precision": "city",
+  "address": "Gloucester, Essex Co., MA"
+ },
+ "The first and only wife of Henry Adams was Edith Rosamund Squire.  After Henry Adams' death, she married  John Fussell.": null,
+ "The first and only wife of Henry Adams, who is my twice my greatgrandfather (9th and 10th), was Edith Rosamund Squire.  After Henry Adams' death, she married  John Fussell.": null,
+ "Charlton Mackrell, Somersetshire, England": {
+  "lat": 51.058516,
+  "lon": -2.672959,
+  "precision": "nominatim",
+  "address": "Charlton Mackrell, Somerset, England, TA11 6AN, United Kingdom"
+ },
+ "Charlton (near Durston), Somerset, England": null,
+ "Charlton Mackrell, Somerset, , England": {
+  "lat": 51.058516,
+  "lon": -2.672959,
+  "precision": "nominatim",
+  "address": "Charlton Mackrell, Somerset, England, TA11 6AN, United Kingdom"
+ },
+ "Bletchley, Buckingham, England": {
+  "lat": 51.994369,
+  "lon": -0.732565,
+  "precision": "nominatim",
+  "address": "Bletchley, Milton Keynes, Buckinghamshire, England, MK2 2FY, United Kingdom"
+ },
+ "Gloucester, Essex Co, MA": {
+  "lat": 42.61835,
+  "lon": -70.66705,
+  "precision": "city",
+  "address": "Gloucester, Essex Co., MA"
+ },
+ "Charlton, Mackrel, shire, Somerset, England, United Kingdom": {
+  "lat": 51.482605,
+  "lon": 0.036536,
+  "precision": "nominatim",
+  "address": "Charlton, Royal Borough of Greenwich, Greater London, England, SE7 8UH, United Kingdom"
+ },
+ "Medford, Middlesex, Massachusetts, USA": {
+  "lat": 42.41785,
+  "lon": -71.10745,
+  "precision": "city",
+  "address": "Medford, Middlesex Co., MA"
+ },
+ "Newbury, Massachusetts": {
+  "lat": 42.7553,
+  "lon": -70.8496,
+  "precision": "city",
+  "address": "Newbury, MA"
+ },
+ "St. Mary's, Bury St. Edmund's, Suffolk, England": {
+  "lat": 52.455548,
+  "lon": 1.437975,
+  "precision": "nominatim",
+  "address": "Saint Mary's, Cross Street, Bungay, East Suffolk, Suffolk, England, NR35 1EH, United Kingdom"
+ },
+ "St. Mary's, Bury St. Edmund, Suffolk, England, USA": {
+  "lat": 38.206621,
+  "lon": -76.538997,
+  "precision": "nominatim",
+  "address": "Saint Mary's County, Maryland, United States"
+ },
+ "Earls Colne,Essex,England": {
+  "lat": 51.918017,
+  "lon": 0.694933,
+  "precision": "nominatim",
+  "address": "Earls Colne, Braintree, Essex, England, United Kingdom"
+ },
+ "Bury St Edmunds, Suffolk, England": {
+  "lat": 52.246037,
+  "lon": 0.712517,
+  "precision": "nominatim",
+  "address": "Bury St Edmunds, West Suffolk, Suffolk, England, United Kingdom"
+ },
+ "St Marys, England": {
+  "lat": 53.097825,
+  "lon": -2.446713,
+  "precision": "nominatim",
+  "address": "Saint Marys, Delamere Street, Coppenhall, Crewe, Cheshire East, England, CW1 2JX, United Kingdom"
+ },
+ "Sudbury": {
+  "lat": 46.49272,
+  "lon": -80.991211,
+  "precision": "nominatim",
+  "address": "Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, Canada"
+ },
+ "Leiden, Leiden, Zuid-Holland, Netherlands": {
+  "lat": 52.159475,
+  "lon": 4.490884,
+  "precision": "nominatim",
+  "address": "Leiden, Zuid-Holland, Nederland"
+ },
+ "Great Amwell, co. Hetford, England": null,
+ "Groton, Connecticut": {
+  "lat": 41.37845,
+  "lon": -72.07415,
+  "precision": "city",
+  "address": "Groton, CT"
+ },
+ "Shoreditch, London, England": {
+  "lat": 51.526669,
+  "lon": -0.079893,
+  "precision": "nominatim",
+  "address": "Shoreditch, London Borough of Hackney, Greater London, England, EC2A 3AR, United Kingdom"
+ },
+ "Yarmouth, Eng., Norfolk, England, United Kingdom": {
+  "lat": 52.607174,
+  "lon": 1.731485,
+  "precision": "nominatim",
+  "address": "Great Yarmouth, Norfolk, England, NR30 2AH, United Kingdom"
+ },
+ "Northampton, Northampton, England": {
+  "lat": 52.23433,
+  "lon": -0.902804,
+  "precision": "nominatim",
+  "address": "Northampton, West Northamptonshire, England, United Kingdom"
+ },
+ "Bransbury Kings Somborne K S, Hampshire, England": null,
+ "Chelsea, London, England": {
+  "lat": 51.488855,
+  "lon": -0.165378,
+  "precision": "nominatim",
+  "address": "Chelsea, Royal Borough of Kensington and Chelsea, Greater London, England, SW3 4UT, United Kingdom"
+ },
+ "Badby, Northamptonshire, , England": {
+  "lat": 52.226176,
+  "lon": -1.181495,
+  "precision": "nominatim",
+  "address": "Badby, Northamptonshire, England, NN11 3AN, United Kingdom"
+ },
+ "Northamptonshire, Northamptonshire, England, United Kingdom": {
+  "lat": 52.310614,
+  "lon": -0.865913,
+  "precision": "nominatim",
+  "address": "Northamptonshire, England, United Kingdom"
+ },
+ "Saint Michael, Coventry, Warwick, England": {
+  "lat": 52.06644,
+  "lon": -1.629782,
+  "precision": "nominatim",
+  "address": "Our Lady and Saint Michael, Brickfield Lane, Shipston on Stour, Shipston-on-Stour, Stratford-on-Avon, Warwickshire, England, CV36 4RQ, United Kingdom"
+ },
+ "Ipswich or Salisbury, Essex , Province of Massachusetts Bay Colony, New England": null,
+ "Hatfield Peverel London St Margaret, New Fish Street, London, England": null,
+ "Wigton, Cumberland, England": {
+  "lat": 54.82468,
+  "lon": -3.161094,
+  "precision": "nominatim",
+  "address": "Wigton, Cumberland, England, United Kingdom"
+ },
+ "Massachusetts Bay Colony": {
+  "lat": 42.407901,
+  "lon": -71.275138,
+  "precision": "nominatim",
+  "address": "Bay Colony, Waltham, Middlesex County, Massachusetts, United States"
+ },
+ "Dutch Church, Brooklyn Kings, New York, USA": {
+  "lat": 42.655636,
+  "lon": -73.406777,
+  "precision": "nominatim",
+  "address": "Dutch Church, Dutch Church Road, Town of Berlin, Rensselaer County, New York, 12345, United States"
+ },
+ "Essex, Essex, Massachusetts, United States": {
+  "lat": 42.6472,
+  "lon": -70.9612,
+  "precision": "county centroid",
+  "address": "Essex Co., MA"
+ },
+ "Southold, Suffolk County, New York": {
+  "lat": 41.0555,
+  "lon": -72.429,
+  "precision": "city",
+  "address": "Southold, Suffolk Co., NY"
+ },
+ ", Essex, Massachusetts, USA": {
+  "lat": 42.6472,
+  "lon": -70.9612,
+  "precision": "county centroid",
+  "address": "Essex Co., MA"
+ },
+ "Abbey Church St Mary, Sherborne, Dorset, England": null,
+ "UK St John The Baptist Yeovil, Somerset, England": null,
+ "Sutton, Worcester, Massachusetts, USA": {
+  "lat": 42.1266,
+  "lon": -71.7552,
+  "precision": "city",
+  "address": "Sutton, Worcester Co., MA"
+ },
+ "Preston City, New London, Connecticut Colony": null,
+ "Salem, Essex, Massachusetts, Colonial British America": null,
+ "Salem, Essex, MA Colony": {
+  "lat": 42.593613,
+  "lon": -70.988763,
+  "precision": "nominatim",
+  "address": "Middleton Rail Trail, Middleton Colony, Middleton, Essex County, Massachusetts, 01937, United States"
+ },
+ "Preston City, New London, Connecticut, Colonial British America": null,
+ "Norfolk: - Musters Returns, 1569, 1572, 1574, 1577": null,
+ "St Dunstan and All Saints, Stepney, Middlesex, England": null,
+ "Taunton, Massachusetts, USA": {
+  "lat": 41.8306,
+  "lon": -71.08485,
+  "precision": "city",
+  "address": "Taunton, MA"
+ },
+ "Weymouth, Norfolk, MA": {
+  "lat": 42.2113,
+  "lon": -70.9582,
+  "precision": "city",
+  "address": "Weymouth, Norfolk Co., MA"
+ },
+ "Great Munden, Hertfordshire, England": {
+  "lat": 51.900066,
+  "lon": -0.043363,
+  "precision": "nominatim",
+  "address": "Great Munden, East Hertfordshire, Hertfordshire, England, United Kingdom"
+ },
+ "Everingham, Yorkshire, England, United Kingdom": {
+  "lat": 53.868107,
+  "lon": -0.75595,
+  "precision": "nominatim",
+  "address": "Everingham, Harswell, East Riding of Yorkshire, Hull and East Yorkshire, England, United Kingdom"
+ },
+ "Lanchester, Durham, , England": {
+  "lat": 54.822007,
+  "lon": -1.742952,
+  "precision": "nominatim",
+  "address": "Lanchester, County Durham, North East, England, United Kingdom"
+ },
+ "Liverpool, Lancashire, England": {
+  "lat": 53.644322,
+  "lon": -2.816729,
+  "precision": "nominatim",
+  "address": "Leeds and Liverpool Canal (Rufford Branch), Rufford, West Lancashire, Lancashire, England, United Kingdom"
+ },
+ "Gravenend, Kings, NY": {
+  "lat": 40.6497,
+  "lon": -73.9498,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Gravenend, Kings Co., NY"
+ },
+ "Dartmouth, Devon, England, United Kingdom": {
+  "lat": 50.351484,
+  "lon": -3.583844,
+  "precision": "nominatim",
+  "address": "Dartmouth, South Hams, Devon, Devon and Torbay, England, United Kingdom"
+ },
+ "Wedmore,,Somerset,England": {
+  "lat": 51.2255,
+  "lon": -2.811439,
+  "precision": "nominatim",
+  "address": "Wedmore, Somerset, England, United Kingdom"
+ },
+ "Wedmore, Somerset, England": {
+  "lat": 51.2255,
+  "lon": -2.811439,
+  "precision": "nominatim",
+  "address": "Wedmore, Somerset, England, United Kingdom"
+ },
+ "Amsterdam, Amsterdam, Noord-Holland, Netherlands": {
+  "lat": 52.37308,
+  "lon": 4.892453,
+  "precision": "nominatim",
+  "address": "Amsterdam, Noord-Holland, Nederland"
+ },
+ "Amsterdam, Noord-Holland, Netherlands": {
+  "lat": 52.37308,
+  "lon": 4.892453,
+  "precision": "nominatim",
+  "address": "Amsterdam, Noord-Holland, Nederland"
+ },
+ "Amsterdam /Barnstable, Barnstable, Massachusetts, United States": {
+  "lat": 41.6862,
+  "lon": -70.2967,
+  "precision": "county centroid (small place not in gazetteer)",
+  "address": "Amsterdam /Barnstable, Barnstable Co., MA"
+ },
+ "Plymouth, MA": {
+  "lat": 42.0399,
+  "lon": -70.8161,
+  "precision": "county centroid",
+  "address": "Plymouth Co., MA"
+ },
+ "Th": {
+  "lat": 14.897192,
+  "lon": 100.83273,
+  "precision": "nominatim",
+  "address": "ประเทศไทย"
+ },
+ "ME": {
+  "lat": 45.709097,
+  "lon": -68.85902,
+  "precision": "nominatim",
+  "address": "Maine, United States"
+ },
+ "Mayfield, Sussex, England": {
+  "lat": 51.019351,
+  "lon": 0.261978,
+  "precision": "nominatim",
+  "address": "Mayfield, Wealden, East Sussex, England, TN20 6BE, United Kingdom"
+ },
+ "York, Maine Colony": {
+  "lat": 43.346682,
+  "lon": -70.473834,
+  "precision": "nominatim",
+  "address": "Colony Beach, Kennebunkport, York County, Maine, 04046, United States"
+ },
+ "Kittery, York, Maine, United States": {
+  "lat": 43.0921,
+  "lon": -70.7429,
+  "precision": "city",
+  "address": "Kittery, York Co., ME"
+ },
+ "New England Colony": {
+  "lat": 36.558324,
+  "lon": -87.272794,
+  "precision": "nominatim",
+  "address": "New England Place, Colony Estates, Clarksville, Montgomery County, Middle Tennessee, Tennessee, 37043, United States"
+ },
+ "Stepney, London, London, England, United Kingdom": {
+  "lat": 51.517402,
+  "lon": -0.046219,
+  "precision": "nominatim",
+  "address": "Stepney, London Borough of Tower Hamlets, Greater London, England, E1 3DH, United Kingdom"
+ },
+ "Shewbury NJ": null,
+ "Bistol, Gloucster, England": null,
+ "Valleyfield, Perthshire, Scotland": null,
+ "Newbury, Essex, Massachusetts, Colonial America": {
+  "lat": 42.7553,
+  "lon": -70.8496,
+  "precision": "city",
+  "address": "Newbury, Essex Co., MA"
+ },
+ "Hartford, Cheshire, England": {
+  "lat": 53.24384,
+  "lon": -2.547668,
+  "precision": "nominatim",
+  "address": "Hartford, Cheshire West and Chester, England, United Kingdom"
+ },
+ "Newton, Devon, England": {
+  "lat": 50.529644,
+  "lon": -3.61121,
+  "precision": "nominatim",
+  "address": "Newton Abbot, Highweek, Teignbridge, Devon, Devon and Torbay, England, United Kingdom"
+ },
+ "Simsbury, Hartford, Connecticut Colony": null,
+ "South Elkington, Lincolnshire, England": {
+  "lat": 53.376387,
+  "lon": -0.052813,
+  "precision": "nominatim",
+  "address": "South Elkington, Elkington, East Lindsey, Lincolnshire, Greater Lincolnshire, England, LN11 0RZ, United Kingdom"
+ },
+ "of Bury, Suffolk, England": {
+  "lat": 52.243915,
+  "lon": 0.717045,
+  "precision": "nominatim",
+  "address": "Saint Edmundsbury Cathedral, Angel Hill, Priors Estate, Bury St Edmunds, West Suffolk, Suffolk, England, IP33 1LY, United Kingdom"
+ },
+ "Bury St Edmonds, Suffolk, , England": null,
+ "St Mary's, Acton, Middlesex, England": null,
+ "Nazeing, Essex, England": {
+  "lat": 51.739927,
+  "lon": 0.047035,
+  "precision": "nominatim",
+  "address": "Nazeing, Tylers Cross, Epping Forest, Essex, England, United Kingdom"
+ },
+ "Nazeing, All Saints, Essex, England": {
+  "lat": 51.739927,
+  "lon": 0.047035,
+  "precision": "nominatim",
+  "address": "Nazeing, Tylers Cross, Epping Forest, Essex, England, United Kingdom"
+ },
+ "Husbandsbosworth, Parish, Leicestershire, England, United Kingdom": null,
+ "Saint Gregory By Saint Paul,London,London,England": null,
+ "Milford, New Haven, British Colony of Connecticut": {
+  "lat": 41.22565,
+  "lon": -73.0648,
+  "precision": "city",
+  "address": "Milford, New Haven Co., CT"
+ },
+ "Milford, New Haven, Connecticut, United States": {
+  "lat": 41.22565,
+  "lon": -73.0648,
+  "precision": "city",
+  "address": "Milford, New Haven Co., CT"
+ },
+ "Milford, New Haven Colony, British Connecticut": {
+  "lat": 41.22565,
+  "lon": -73.0648,
+  "precision": "city",
+  "address": "Milford, CT"
+ },
+ "Connecticut Colony": {
+  "lat": 41.687804,
+  "lon": -81.314964,
+  "precision": "nominatim",
+  "address": "Connecticut Colony, Mentor, Lake County, Ohio, United States"
+ },
+ "Milford, Conn.": {
+  "lat": 41.22565,
+  "lon": -73.0648,
+  "precision": "city",
+  "address": "Milford, CT"
+ },
+ "Milford, Connecticut": {
+  "lat": 41.22565,
+  "lon": -73.0648,
+  "precision": "city",
+  "address": "Milford, CT"
+ },
+ "Waterbury, Connecticut, USA": {
+  "lat": 41.5582,
+  "lon": -73.0515,
+  "precision": "city",
+  "address": "Waterbury, CT"
+ },
+ "Catherine Hill, Surrey, England, United Kingdom": {
+  "lat": 51.578457,
+  "lon": -2.581687,
+  "precision": "nominatim",
+  "address": "Catherine Hill, Olveston, South Gloucestershire, West of England, England, BS35 4EN, United Kingdom"
+ },
+ "Stamford, Fairfield, Connecticut, United States": {
+  "lat": 41.0534,
+  "lon": -73.5387,
+  "precision": "city",
+  "address": "Stamford, Fairfield Co., CT"
+ },
+ "Plymouth, Mass.": {
+  "lat": 42.0399,
+  "lon": -70.8161,
+  "precision": "county centroid",
+  "address": "Plymouth Co., MA"
+ },
+ "Shalford, Colchester, Essex Co, England": null,
+ "St Botolph, Aldgate, London, England": {
+  "lat": 50.948582,
+  "lon": -0.522749,
+  "precision": "nominatim",
+  "address": "St Botolph, London Road, Hardham, Coldwaltham, Horsham, West Sussex, England, RH20 1LB, United Kingdom"
+ },
+ "Nottinghamshire, England": {
+  "lat": 53.145929,
+  "lon": -1.021497,
+  "precision": "nominatim",
+  "address": "Nottinghamshire, East Midlands, England, United Kingdom"
+ },
+ "St Peter Upon Cornhill, London, England": {
+  "lat": 51.513251,
+  "lon": -0.084566,
+  "precision": "nominatim",
+  "address": "St Peter-upon-Cornhill Church, Cornhill, Leadenhall Market, Bank, City of London, Greater London, England, EC3V 3PD, United Kingdom"
+ },
+ "Rolleston, Staffordshire, England": {
+  "lat": 52.846299,
+  "lon": -1.650868,
+  "precision": "nominatim",
+  "address": "Rolleston on Dove, East Staffordshire, Staffordshire, England, United Kingdom"
+ },
+ "Sheffield, Yorkshire, England": {
+  "lat": 53.380663,
+  "lon": -1.470228,
+  "precision": "nominatim",
+  "address": "Sheffield, South Yorkshire, England, United Kingdom"
+ },
+ "St Dunstan West, London St Michael, Wood Street Bourne, co. Kent St Peter's, Cornhill, London, London, England": {
+  "lat": 51.474719,
+  "lon": -0.401744,
+  "precision": "nominatim",
+  "address": "St. Dunstan's Road, Rectory Farm Estate, Beavers, Cranford, London Borough of Hounslow, Greater London, England, TW4 7QN, United Kingdom"
+ },
+ "Rolleston, Kingdom of, Staffordshire, England, United Kingdom": {
+  "lat": 53.065144,
+  "lon": -0.900123,
+  "precision": "nominatim",
+  "address": "Rolleston, Station Road, Rolleston CP, Fiskerton, Newark and Sherwood, Nottinghamshire, East Midlands, England, NG25 0TS, United Kingdom"
+ },
+ "Shoreditch, London, United Kingdom": {
+  "lat": 51.526669,
+  "lon": -0.079893,
+  "precision": "nominatim",
+  "address": "Shoreditch, London Borough of Hackney, Greater London, England, EC2A 3AR, United Kingdom"
+ },
+ "St Dunstan in the East, London, England": {
+  "lat": 51.509678,
+  "lon": -0.082496,
+  "precision": "nominatim",
+  "address": "St Dunstan in the East, St. Dunstan's Hill, Leadenhall Market, Monument, City of London, Greater London, England, EC3R 8HN, United Kingdom"
+ },
+ "Lancaster, St Mary, Lancashire, England": {
+  "lat": 54.048822,
+  "lon": -2.80135,
+  "precision": "nominatim",
+  "address": "Lancaster, Lancashire, England, LA1 1JQ, United Kingdom"
+ },
+ "Ipswich, Essex, Mass.": {
+  "lat": 42.6809,
+  "lon": -70.8494,
+  "precision": "city",
+  "address": "Ipswich, Essex Co., MA"
+ },
+ "Plymouth, Plymouth Co, MA": {
+  "lat": 42.0399,
+  "lon": -70.8161,
+  "precision": "county centroid",
+  "address": "Plymouth Co., MA"
+ },
+ "Garthorpe, Leicestershire, England": {
+  "lat": 52.783275,
+  "lon": -0.750478,
+  "precision": "nominatim",
+  "address": "Garthorpe, Melton, Leicestershire, England, United Kingdom"
+ },
+ "Bristol, Somerset, UK": {
+  "lat": 51.187258,
+  "lon": -3.087071,
+  "precision": "nominatim",
+  "address": "Stockland Bristol, Combwich, Somerset, England, United Kingdom"
+ },
+ "St. Nicholas Church, Yarmouth, Norfolk, England": {
+  "lat": 52.611367,
+  "lon": 1.727314,
+  "precision": "nominatim",
+  "address": "Great Yarmouth Minster, Church Plain, Northgate, Great Yarmouth, Norfolk, England, NR30 1NE, United Kingdom"
+ },
+ "Hamerton, Lincolnshire, England": {
+  "lat": 53.206858,
+  "lon": -0.113923,
+  "precision": "nominatim",
+  "address": "Hamerton Gardens, Horncastle, East Lindsey, Lincolnshire, Greater Lincolnshire, England, United Kingdom"
+ },
+ "Saint Albans, Hertfordshire, England, United Kingdom": {
+  "lat": 51.753051,
+  "lon": -0.337967,
+  "precision": "nominatim",
+  "address": "St Albans, Hertfordshire, England, United Kingdom"
+ },
+ "Brenchley, Kent, England, United Kingdom": {
+  "lat": 51.150847,
+  "lon": 0.399885,
+  "precision": "nominatim",
+  "address": "Brenchley, Tunbridge Wells, Kent, England, TN12 7NJ, United Kingdom"
+ },
+ "Of Kent,England": {
+  "lat": 51.426924,
+  "lon": 0.361299,
+  "precision": "nominatim",
+  "address": "Saint George's Church of England School (Secondary Phase), Meadow Road, Kings Farm, Gravesend, Gravesham, Kent, England, DA11 7LS, United Kingdom"
+ },
+ "South Cave, East Yorkshire, England": {
+  "lat": 53.763569,
+  "lon": -0.618901,
+  "precision": "nominatim",
+  "address": "South Cave, East Riding of Yorkshire, Hull and East Yorkshire, England, United Kingdom"
+ },
+ "Benchley, Kentshire, , England": null,
+ "Olton, Cheshire, , England": null,
+ "Great Haseley, Oxfordshire, , England": {
+  "lat": 51.710899,
+  "lon": -1.070283,
+  "precision": "nominatim",
+  "address": "Great Haseley, Great Milton, South Oxfordshire, Oxfordshire, England, United Kingdom"
+ },
+ "Stafford, Staffordshire, , England": {
+  "lat": 52.806316,
+  "lon": -2.116382,
+  "precision": "nominatim",
+  "address": "Stafford, Staffordshire, England, United Kingdom"
+ },
+ "Beaufort, Maine-et-Loire, Pays de la Loire, France": {
+  "lat": 47.811794,
+  "lon": -0.358896,
+  "precision": "nominatim",
+  "address": "Beaufort, Sablé-sur-Sarthe, La Flèche, Sarthe, Pays de la Loire, France métropolitaine, 72300, France"
+ },
+ "Chateau De Beaufort, , Meurthe et Mosel, France": null,
+ ", Monmouthshire, , Wales": {
+  "lat": 51.750106,
+  "lon": -2.833333,
+  "precision": "nominatim",
+  "address": "Monmouthshire, Cymru / Wales, United Kingdom"
+ },
+ "Alnwick, Northumberland, , England": {
+  "lat": 55.41334,
+  "lon": -1.707235,
+  "precision": "nominatim",
+  "address": "Alnwick, Northumberland, North East, England, United Kingdom"
+ },
+ "Abbaye destbavon, Gand, Flandre Oriental, Belgium": null,
+ "Stratton Audley, Oxfordshire, , England": {
+  "lat": 51.933618,
+  "lon": -1.109515,
+  "precision": "nominatim",
+  "address": "Stratton Audley, Cherwell, Oxfordshire, England, United Kingdom"
+ },
+ ", Yorkshire, , England": {
+  "lat": 53.982527,
+  "lon": -1.38525,
+  "precision": "nominatim",
+  "address": "Yorkshire, England, United Kingdom"
+ },
+ "Walton, , Under Edge, England": null,
+ ", Lancashire, , England": {
+  "lat": 53.861171,
+  "lon": -2.565094,
+  "precision": "nominatim",
+  "address": "Lancashire, England, United Kingdom"
+ },
+ "Newton, Lancashire, , England": {
+  "lat": 53.949256,
+  "lon": -2.463224,
+  "precision": "nominatim",
+  "address": "Newton, Ribble Valley, Lancashire, England, United Kingdom"
+ },
+ "Boulogne Cathedral, , , France": null,
+ "Chanay, Ain, Rhone-Alpes, France": {
+  "lat": 46.005156,
+  "lon": 5.785206,
+  "precision": "nominatim",
+  "address": "Chanay, Nantua, Ain, Auvergne-Rhône-Alpes, France métropolitaine, 01420, France"
+ },
+ "Ghent, Belgium": {
+  "lat": 51.053829,
+  "lon": 3.725012,
+  "precision": "nominatim",
+  "address": "Gent, Oost-Vlaanderen, Vlaanderen, België / Belgique / Belgien"
+ },
+ "Wotton Und Edge, Gloucestershire, , England": null,
+ "East Grinstead, Sussex, , England": {
+  "lat": 51.128565,
+  "lon": -0.014299,
+  "precision": "nominatim",
+  "address": "East Grinstead, Mid Sussex, West Sussex, England, United Kingdom"
+ },
+ ", Leicestershire, , England": {
+  "lat": 52.666667,
+  "lon": -1.0,
+  "precision": "nominatim",
+  "address": "Leicestershire, England, United Kingdom"
+ },
+ "Alton Barnes, Wiltshire, , England": {
+  "lat": 51.356968,
+  "lon": -1.850197,
+  "precision": "nominatim",
+  "address": "Alton Barnes, Wiltshire, England, SN8 4LE, United Kingdom"
+ },
+ "Trafford, Cheshire, , England": {
+  "lat": 53.221784,
+  "lon": -2.83247,
+  "precision": "nominatim",
+  "address": "Mickle Trafford, Cheshire West and Chester, England, CH2 4QH, United Kingdom"
+ },
+ "Fiennes, Pas-de-Calais, Nord-Pas-de-Calais, France": {
+  "lat": 50.828162,
+  "lon": 1.8268,
+  "precision": "nominatim",
+  "address": "Fiennes, Calais, Pas-de-Calais, Hauts-de-France, France métropolitaine, 62132, France"
+ },
+ "Castile, Wyoming, New York, USA": {
+  "lat": 42.6359,
+  "lon": -78.0547,
+  "precision": "city",
+  "address": "Castile, Wyoming Co., NY"
+ },
+ "Corbeil, Marne, Champagne-Ardenne, France": {
+  "lat": 48.577851,
+  "lon": 4.427115,
+  "precision": "nominatim",
+  "address": "Corbeil, Vitry-le-François, Marne, Grand Est, France métropolitaine, 51320, France"
+ },
+ ", , Berk, England": {
+  "lat": 51.480396,
+  "lon": -0.188723,
+  "precision": "nominatim",
+  "address": "Lotte Berk, 465, Fulham Road, Wandon Estate, Fulham, London Borough of Hammersmith and Fulham, Greater London, England, SW6 1HN, United Kingdom"
+ },
+ "Of Blackmore, Herefordshire, , England": null,
+ "Stonor, Oxfordshire, , England": {
+  "lat": 51.591365,
+  "lon": -0.938696,
+  "precision": "nominatim",
+  "address": "Stonor, Pishill with Stonor, South Oxfordshire, Oxfordshire, England, RG9 6HB, United Kingdom"
+ },
+ "Winterborn, , , England": null,
+ "Canterbury, Kent, , England": {
+  "lat": 51.280028,
+  "lon": 1.080253,
+  "precision": "nominatim",
+  "address": "Canterbury, Kent, England, CT1 2JA, United Kingdom"
+ },
+ "Bordeaux, McCormick,": {
+  "lat": 33.926511,
+  "lon": -82.420684,
+  "precision": "nominatim",
+  "address": "Bordeaux, McCormick County, South Carolina, United States"
+ },
+ "Bordeaux, McCormick": {
+  "lat": 33.926511,
+  "lon": -82.420684,
+  "precision": "nominatim",
+  "address": "Bordeaux, McCormick County, South Carolina, United States"
+ },
+ "Castle, Angi, Normandy, France": {
+  "lat": 49.877435,
+  "lon": 1.126486,
+  "precision": "nominatim",
+  "address": "Château d'Arques-la-Bataille, Route d'Aubermesnil, Côte du Château, Belhême, Arques-la-Bataille, Dieppe, Seine-Maritime, Normandie, France métropolitaine, 76880, France"
+ },
+ "Castle of Angi, , Normandy, France": null,
+ "Ont": {
+  "lat": 50.000678,
+  "lon": -86.000977,
+  "precision": "nominatim",
+  "address": "Ontario, Canada"
+ },
+ "?": null,
+ "Mi": {
+  "lat": 43.621195,
+  "lon": -84.682435,
+  "precision": "nominatim",
+  "address": "Michigan, United States"
+ },
+ "NY": {
+  "lat": 40.712728,
+  "lon": -74.006015,
+  "precision": "nominatim",
+  "address": "New York, United States"
+ },
+ "VA": {
+  "lat": 37.123224,
+  "lon": -78.492772,
+  "precision": "nominatim",
+  "address": "Virginia, United States"
+ },
+ "WA": {
+  "lat": 38.895098,
+  "lon": -77.036385,
+  "precision": "nominatim",
+  "address": "Washington, District of Columbia, United States"
  }
 }

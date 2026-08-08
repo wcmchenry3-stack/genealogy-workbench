@@ -158,7 +158,27 @@ HISTORICAL: dict[str, tuple[str, str]] = {
     "province of canada": ("Canada", "CA"),
 }
 
-COUNTY_SUFFIX = re.compile(r"^(.*?)[\s,]+(County|Co|Parish|Shire|Borough)\.?$", re.I)
+COUNTY_SUFFIX = re.compile(r"^(.*?)[\s,]+(County|Co|Parish|Shire|Borough|Planning Region)\.?$", re.I)
+
+
+def _subregion_name(name: str, suffix: str) -> str:
+    """Build the stored subregion value from a COUNTY_SUFFIX match.
+
+    "County"/"Co"/"Parish"/"Shire"/"Borough" get stripped -- PlaceRef.label()
+    re-adds a short " Co." for display. Connecticut's post-2022 "planning
+    region" isn't a county and reads oddly with that same abbreviation
+    ("Southeastern Connecticut Co." names nothing real), so its full name is
+    kept as the subregion value itself; label() and the report hierarchy
+    headers detect that by the trailing "region" and leave it alone."""
+    name = name.strip()
+    return f"{name} Planning Region" if suffix.strip().lower() == "planning region" else name
+
+
+def subregion_is_self_describing(subregion: str) -> bool:
+    """True when a subregion value already names what kind of thing it is
+    (Connecticut's "Xxx Planning Region"), so display code should use it as-is
+    instead of appending the "County"/"Co." that fits an ordinary county."""
+    return (subregion or "").strip().lower().endswith("region")
 CEMETERY_LEAD = re.compile(
     r"^(.*?(?:Cemetery|Cemeteries|Memorial Gardens|Memorial Park|Burial Ground|"
     r"Churchyard|Graveyard|Mausoleum))\s*,\s*(.*)$", re.I)
@@ -171,7 +191,7 @@ class PlaceRef:
     """A resolved place. `country_code` is None only when nothing was recognised."""
     raw: str
     locality: Optional[str] = None      # town / village / township
-    subregion: Optional[str] = None     # US county, UK shire
+    subregion: Optional[str] = None     # US county (or CT's post-2022 "planning region"), UK shire
     region: Optional[str] = None        # US state, CA province, or foreign region
     region_code: Optional[str] = None   # "OH" when region is a US state
     country: Optional[str] = None       # display name ("England", not "GB")
@@ -196,7 +216,10 @@ class PlaceRef:
     def label(self) -> str:
         bits = [self.locality]
         if self.subregion:
-            bits.append(f"{self.subregion} Co." if self.is_us else self.subregion)
+            if self.is_us and not subregion_is_self_describing(self.subregion):
+                bits.append(f"{self.subregion} Co.")
+            else:
+                bits.append(self.subregion)
         bits.append(self.region_code if self.is_us and self.region_code else self.region)
         if not self.is_us:
             bits.append(self.historical or self.country)
@@ -297,7 +320,7 @@ def parse_place(raw: str, counties_for: Optional[dict] = None) -> Optional[Place
     for i in range(len(parts) - 1, -1, -1):
         mm = COUNTY_SUFFIX.match(parts[i])
         if mm:
-            ref.subregion = mm.group(1)
+            ref.subregion = _subregion_name(mm.group(1), mm.group(2))
             parts.pop(i)
             break
     if ref.subregion is None and counties_for and ref.region_code:
