@@ -15,6 +15,7 @@ from .base import Report
 from .r_timelines import REPORT as TIMELINES
 from .r_locations import REPORT as LOCATIONS
 from .r_map import REPORT as MAP
+from .r_map_classic import REPORT as MAP_CLASSIC
 from .r_tree import REPORT as TREE
 from .r_immigrants import REPORT as IMMIGRANTS
 from .r_spouses import REPORT as SPOUSES
@@ -22,7 +23,7 @@ from .r_diagnostics import REPORT as DIAGNOSTICS
 from .r_duplicates import REPORT as DUPLICATES
 
 ALL_REPORTS: list[Report] = [
-    TIMELINES, LOCATIONS, MAP, TREE, IMMIGRANTS, SPOUSES, DIAGNOSTICS, DUPLICATES,
+    TIMELINES, LOCATIONS, MAP, MAP_CLASSIC, TREE, IMMIGRANTS, SPOUSES, DIAGNOSTICS, DUPLICATES,
 ]
 
 BY_ID: dict[str, Report] = {r.id: r for r in ALL_REPORTS}
