@@ -347,7 +347,12 @@ def run(spec: RunSpec) -> list[Artifact]:
             for subregion, subcards in subregions.items():
                 cards_html = "".join(_place_card(c) for c in subcards)
                 if subregion:
-                    label = f"{subregion} County" if subcards[0]["countrycode"] == "US" else subregion
+                    # Connecticut's post-2022 "Xxx Planning Region" already names what
+                    # it is; appending "County" to that would be wrong, so only add it
+                    # to a bare county name.
+                    self_describing = subregion.strip().lower().endswith("region")
+                    label = (subregion if (self_describing or subcards[0]["countrycode"] != "US")
+                            else f"{subregion} County")
                     subregion_chunks.append(
                         f'<div class="plc-subregion"><h4>{esc(label)} '
                         f'<span class="mut num">({len(subcards)})</span></h4>{cards_html}</div>')
