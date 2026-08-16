@@ -18,11 +18,11 @@ scripts/house_2026_races/publish.py documents. That branch only ever
 receives generated HTML from this script, never hand-edited source needing
 review.
 
-Only a fixed subset of reports is published (see PUBLISHED_REPORTS below):
-Ancestor Timelines, Locations, Ancestor Chart, and the *classic* offline
-research map. The interactive worldwide map (r_map.py) is deliberately
-excluded -- it pulls Leaflet from a CDN and OpenStreetMap tiles over the
-network, which the hub's CSP does not currently allow.
+All reports are published except the interactive worldwide map (r_map.py)
+-- see PUBLISHED_REPORTS below. That one's deliberately excluded because it
+pulls Leaflet from a CDN and OpenStreetMap tiles over the network, which the
+hub's CSP does not currently allow; the classic offline research map covers
+the same events with no external dependency.
 
 Each publish is a plain overwrite of site/genealogy/, not a versioned
 append -- there's no need to track a history of the family tree the way
@@ -64,6 +64,14 @@ PUBLISHED_REPORTS = [
      "Printable pedigree chart, four generations per page."),
     ("map_classic", "map_classic.html", "map", "Research Map",
      "Offline SVG research map of every located ancestral event."),
+    ("immigrants", "immigrants.html", "immigrants", "Immigrant Ancestors",
+     "For every branch, the first ancestor born outside the US — when and where each line arrived."),
+    ("spouses", "spouse_relationships.html", "spouses", "Spouse Relationships",
+     "Couples in the tree who share a blood ancestor."),
+    ("diagnostics", "diagnostics.html", "diagnostics", "Relationship Diagnostics",
+     "Implausible parent/child links — catches likely data-entry errors."),
+    ("duplicates", "duplicates.html", "duplicates", "Possible Duplicate People",
+     "Pairs probably entered twice, ranked by match confidence."),
 ]
 
 _CARD_PAGE_TEMPLATE = """<!doctype html>
