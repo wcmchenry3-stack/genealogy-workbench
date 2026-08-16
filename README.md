@@ -4,9 +4,12 @@ A local web app for running genealogy reports against a GEDCOM file. Pick a fami
 file, choose who to centre it on, tick the reports you want, and get back maps,
 timelines, charts and data-quality checks.
 
-Everything runs on your own machine. Nothing about your family is uploaded
-anywhere — the only network calls are geocoding lookups for places that aren't
-already cached, and map tiles when you open the map.
+Everything runs on your own machine, and nothing about your family is uploaded
+anywhere automatically — the only network calls a normal run makes are
+geocoding lookups for places that aren't already cached, and map tiles when
+you open the map. The one exception is `publish.py`, an explicit, separate
+step you run by hand when you want a report viewable from somewhere other
+than this machine — see [Publishing reports to the web](#publishing-reports-to-the-web).
 
 ---
 
@@ -118,6 +121,37 @@ confirm the exact address before driving anywhere.
 
 `data/address_override.csv` lets you correct a place by hand; it wins over all
 three tiers.
+
+---
+
+## Publishing reports to the web
+
+Results normally stay local, at `http://127.0.0.1:5333/`. To view a run from
+anywhere, `publish.py` copies four of the reports (Ancestor Timelines,
+Locations, Ancestor Chart, and the offline classic map) into a sibling
+`genealogy_reports_site` checkout and pushes them, which redeploys a private
+site behind a login:
+
+```
+python publish.py              # publishes the most recent run
+python publish.py <run_id>     # publishes runs/<run_id> specifically
+```
+
+This requires `genealogy_reports_site` to be cloned as a sibling of this repo
+(`../genealogy_reports_site`) — see that repo's README for the one-time
+Render/Cloudflare Access setup. Publishing is best-effort: a failure (missing
+sibling repo, git error, network hiccup) is logged, never raised, so it never
+blocks a local run from succeeding.
+
+The interactive worldwide map (the one with the OpenStreetMap-tile basemap) is
+deliberately **not** published — it loads Leaflet from a CDN and map tiles
+over the network, which the hub's Content-Security-Policy doesn't currently
+allow. The offline classic map covers the same events without either.
+
+Every publish overwrites `site/genealogy/` in place; it isn't a versioned
+history the way `scripts/house_2026_races` tracks election-result trends
+locally. See `genealogy_reports_site`'s README for what that does and doesn't
+mean for data that's been corrected or removed.
 
 ---
 
