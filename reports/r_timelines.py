@@ -30,20 +30,38 @@ EXTRA_CSS = """
 
 EXTRA_JS = """
 <script>
+// Cached once at load instead of re-querying the DOM on every keystroke --
+// with thousands of .person cards, a fresh querySelectorAll('.gen-block')
+// + nested querySelectorAll('.person') on every oninput event is the
+// difference between typing feeling instant and feeling laggy.
+var TL_INDEX=null;
+function tlIndex(){
+  if(!TL_INDEX){
+    TL_INDEX=Array.prototype.map.call(document.querySelectorAll('.gen-block'),function(block){
+      return {block:block, cards:Array.prototype.map.call(block.querySelectorAll('.person'),function(card){
+        return {el:card, name:card.getAttribute('data-name')||'', line:card.getAttribute('data-line')||''};
+      })};
+    });
+  }
+  return TL_INDEX;
+}
 function filterTimelines(){
   var q=(document.getElementById('q').value||'').trim().toLowerCase();
   var line=document.getElementById('lineSel').value;
-  document.querySelectorAll('.gen-block').forEach(function(block){
+  tlIndex().forEach(function(g){
     var any=false;
-    block.querySelectorAll('.person').forEach(function(card){
-      var name=card.getAttribute('data-name')||'';
-      var l=card.getAttribute('data-line')||'';
-      var show=(!q||name.indexOf(q)>-1)&&(!line||l===line);
-      card.style.display=show?'':'none';
+    g.cards.forEach(function(c){
+      var show=(!q||c.name.indexOf(q)>-1)&&(!line||c.line===line);
+      c.el.style.display=show?'':'none';
       if(show)any=true;
     });
-    block.style.display=any?'':'none';
+    g.block.style.display=any?'':'none';
   });
+}
+var _tlDebounce=null;
+function filterTimelinesDebounced(){
+  clearTimeout(_tlDebounce);
+  _tlDebounce=setTimeout(filterTimelines,120);
 }
 </script>
 """
@@ -233,7 +251,7 @@ def run(spec: RunSpec) -> list[Artifact]:
                         f'person’s table but cannot be plotted on the timeline strip.</div>')
 
     toolbar = ('<div class="toolbar">'
-              '<input type="search" id="q" placeholder="Filter by name…" oninput="filterTimelines()">'
+              '<input type="search" id="q" placeholder="Filter by name…" oninput="filterTimelinesDebounced()">'
               '<select id="lineSel" onchange="filterTimelines()">'
               '<option value="">All lines</option>'
               '<option value="paternal">Paternal</option>'

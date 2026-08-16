@@ -146,6 +146,12 @@ EXTRA_JS = """
     if(countEl)countEl.textContent=shown+' of '+META.length+' places';
   };
 
+  var _plDebounce=null;
+  window.filterPlacesDebounced=function(){
+    clearTimeout(_plDebounce);
+    _plDebounce=setTimeout(filterPlaces,120);
+  };
+
   window.clearPlaceFilters=function(){
     document.getElementById('q').value='';
     LEVELS.forEach(function(lv){
@@ -378,7 +384,7 @@ def run(spec: RunSpec) -> list[Artifact]:
                  f'<span class="chip">{burial_places} with burials</span></div>')
 
     toolbar = ('<div class="toolbar">'
-              '<input type="search" id="q" placeholder="Filter by place…" oninput="filterPlaces()">'
+              '<input type="search" id="q" placeholder="Filter by place…" oninput="filterPlacesDebounced()">'
               '<div class="fgrp"><label for="fCountry">Country</label>'
               '<select id="fCountry" multiple size="6" onchange="filterPlaces()"></select></div>'
               '<div class="fgrp"><label for="fRegion">State / province</label>'
