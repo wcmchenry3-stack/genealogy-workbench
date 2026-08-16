@@ -43,6 +43,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from .base import Artifact, Param, Report, RunSpec, P_MAX_GENS, P_YEAR_MIN, P_YEAR_MAX, html_artifact
+from .r_timelines import ANCESTOR_WALK_JS, _people_and_events
 from .theme import CSS, esc, MAP_CATEGORY, place_anchor, write_page
 
 INSTALL_HINT = "pip install pyshp basemap-data"
@@ -198,7 +199,7 @@ def run(spec: RunSpec) -> list[Artifact]:
             "cem": cem_detail, "burial": has_burial,
             "n": len(evs), "np": len({e["PersonID"] for e in evs}),
             "events": sorted(
-                [{"person": e["PersonName"], "rel": e["Relationship"], "line": e["Line"],
+                [{"pid": e["PersonID"], "person": e["PersonName"], "rel": e["Relationship"], "line": e["Line"],
                   "event": e["Event"], "cat": MAP_CATEGORY.get(e["Event"], "residence"),
                   "date": e["Date"], "year": (int(e["Year"]) if str(e.get("Year", "")).strip().isdigit() else None),
                   "plot": e.get("CemeteryPlot") or ""}
@@ -328,9 +329,14 @@ def run(spec: RunSpec) -> list[Artifact]:
                 'so the &ldquo;full detail&rdquo; links are disabled. Tick Locations next time to enable '
                 'them.</p>')
 
+    tree = spec.pipeline.tree if spec.pipeline else None
+    ancestors = spec.pipeline.ancestors if spec.pipeline else None
+    person_graph, _unused = _people_and_events(rows, tree, ancestors)
+
     state_list = ", ".join(state_names[s] for s in states)
     html = _render(
-        target=spec.target_name, people_count=len({e["person"] for p in places for e in p["events"]}),
+        target=spec.target_name, target_id=spec.target_id, person_graph=person_graph,
+        people_count=len({e["person"] for p in places for e in p["events"]}),
         total_events=total_events, place_count=len(places), state_list=state_list,
         county_svg=county_svg, state_labels="".join(state_labels), w=w, h=h,
         people=people, y_lo=y_lo, y_hi=y_hi, places=places, has_locations=has_locations,
@@ -343,9 +349,11 @@ def run(spec: RunSpec) -> list[Artifact]:
                                 f"{'s' if len(states) != 1 else ''} \u00b7 offline, no tiles"))]
 
 
-def _render(*, target, people_count, total_events, place_count, state_list, county_svg, state_labels,
-           w, h, people, y_lo, y_hi, places, has_locations, excluded_note, link_note) -> str:
+def _render(*, target, target_id, person_graph, people_count, total_events, place_count, state_list,
+           county_svg, state_labels, w, h, people, y_lo, y_hi, places, has_locations,
+           excluded_note, link_note) -> str:
     data = json.dumps(places, separators=(",", ":"))
+    people_graph_json = json.dumps(person_graph, separators=(",", ":"))
     people_opts = "".join(f"<option>{esc(p)}</option>" for p in people)
     href_base = "../locations/locations.html#" if has_locations else ""
 
@@ -394,6 +402,18 @@ aside .pm{{color:var(--text-secondary);font-size:12px;margin:0 0 12px}}
 .empty{{color:var(--text-muted);font-size:13px}}
 .warn{{margin-top:12px;padding:9px 11px;border-radius:8px;background:var(--surface-2);
  border-left:3px solid var(--cemetery);color:var(--text-secondary);font-size:11.5px}}
+.center-ctl{{position:relative}}
+.center-ctl input{{min-width:200px}}
+.center-results{{position:absolute;top:100%;left:0;z-index:5;background:var(--surface-1);
+ border:1px solid var(--line);border-radius:8px;margin-top:4px;max-height:280px;overflow:auto;
+ min-width:260px;box-shadow:0 6px 18px rgba(0,0,0,.15);display:none}}
+.center-results.open{{display:block}}
+.center-results button{{display:block;width:100%;text-align:left;font:inherit;background:none;
+ border:none;border-bottom:1px solid var(--line);padding:8px 12px;cursor:pointer;color:var(--text-primary)}}
+.center-results button:last-child{{border-bottom:none}}
+.center-results button:hover{{background:var(--surface-2)}}
+.center-now{{color:var(--text-secondary)}}
+.center-now b{{color:var(--text-primary)}}
 .zoom{{position:absolute;right:12px;bottom:12px;display:flex;flex-direction:column;gap:5px}}
 .zoom button{{width:30px;height:30px;font-size:16px;border:1px solid var(--line);
  background:var(--surface-1);color:var(--text-primary);border-radius:7px;cursor:pointer}}
@@ -404,6 +424,10 @@ aside .pm{{color:var(--text-secondary);font-size:12px;margin:0 0 12px}}
 <p class="sub">{people_count} people &middot; {total_events} located events &middot; {place_count} places in {esc(state_list)}</p></header>
 {link_note}{excluded_note}
 <div class="bar">
+ <div class="grp"><span class="cap">Center on</span>
+  <div class="center-ctl"><input type="search" id="centerQ" placeholder="Search a person…" autocomplete="off">
+  <div class="center-results" id="centerResults"></div></div>
+  <span id="centerNow" class="center-now"></span></div>
  <div class="grp"><span class="cap">Show</span>
   <label><input type="checkbox" class="cat" value="cemetery" checked><span class="sw" style="background:var(--cemetery)"></span>Burial</label>
   <label><input type="checkbox" class="cat" value="vital" checked><span class="sw" style="background:var(--vital)"></span>Birth / death / marriage</label>
@@ -424,19 +448,61 @@ aside .pm{{color:var(--text-secondary);font-size:12px;margin:0 0 12px}}
  events; a dashed ring marks a place with a burial.</p></aside></main>
 <script>
 const DATA={data}, HAS_LOC={str(has_locations).lower()};
+const PEOPLE={people_graph_json}, DEFAULT_TARGET={json.dumps(target_id)};
+{ANCESTOR_WALK_JS}
 const CV=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const COL={{vital:'--vital',cemetery:'--cemetery',residence:'--residence'}};
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]));
 const pins=document.getElementById('pins'),panel=document.getElementById('panel');
 let sel=null;
 
+// Re-walked whenever "Center on" picks someone new (walkAncestors, from
+// ANCESTOR_WALK_JS, is the same ported algorithm r_timelines.py/r_locations.py
+// use) -- each event's rel/line as baked at generation time is for the run's
+// *default* target only, so live filtering/display always reads the fresh
+// values out of here instead, keyed by PersonID.
+let CURRENT_ANCESTORS=null, CURRENT_TARGET=null;
+function recenter(id){{
+ if(!PEOPLE[id])return;
+ CURRENT_TARGET=id;
+ CURRENT_ANCESTORS=walkAncestors(id,null);
+ location.hash='p='+encodeURIComponent(id);
+ document.getElementById('centerNow').innerHTML='Centered on <b>'+esc(PEOPLE[id].n)+'</b>';
+ draw();
+}}
+function centerSearch(){{
+ const q=(document.getElementById('centerQ').value||'').trim().toLowerCase();
+ const box=document.getElementById('centerResults');
+ if(!q){{box.classList.remove('open');box.innerHTML='';return;}}
+ const hits=Object.keys(PEOPLE).filter(id=>(PEOPLE[id].n||'').toLowerCase().indexOf(q)>-1).slice(0,20);
+ if(!hits.length){{box.classList.remove('open');box.innerHTML='';return;}}
+ box.innerHTML=hits.map(id=>`<button type="button" data-id="${{esc(id)}}">${{esc(PEOPLE[id].n)}}</button>`).join('');
+ box.classList.add('open');
+}}
+document.getElementById('centerQ').addEventListener('input',centerSearch);
+document.getElementById('centerResults').addEventListener('click',ev=>{{
+ const btn=ev.target.closest('button[data-id]');
+ if(!btn)return;
+ document.getElementById('centerQ').value='';
+ document.getElementById('centerResults').classList.remove('open');
+ recenter(btn.getAttribute('data-id'));
+}});
+document.addEventListener('click',ev=>{{
+ if(!ev.target.closest('.center-ctl'))document.getElementById('centerResults').classList.remove('open');
+}});
+
 function visible(){{
  const cats=[...document.querySelectorAll('.cat:checked')].map(c=>c.value);
  const line=document.getElementById('line').value,per=document.getElementById('person').value;
  const yr=+document.getElementById('yr').value;
  document.getElementById('yrl').textContent={y_lo}+'\\u2013'+yr;
- return DATA.map(p=>({{p,evs:p.events.filter(e=>cats.includes(e.cat)&&(!line||e.line===line)&&
-   (!per||e.person===per)&&(e.year==null||e.year<=yr))}})).filter(o=>o.evs.length);
+ if(!CURRENT_ANCESTORS)return[];
+ return DATA.map(p=>({{p,evs:p.events.filter(e=>{{
+   const a=CURRENT_ANCESTORS[e.pid];
+   if(!a)return false;
+   return cats.includes(e.cat)&&(!line||a.line===line)&&(!per||e.person===per)&&(e.year==null||e.year<=yr);
+ }}).map(e=>Object.assign({{}},e,{{rel:CURRENT_ANCESTORS[e.pid].rel,line:CURRENT_ANCESTORS[e.pid].line}}))}}))
+  .filter(o=>o.evs.length);
 }}
 function draw(){{
  const vis=visible();pins.innerHTML='';
@@ -524,7 +590,13 @@ svg.addEventListener('click',clearPanel);
 document.querySelectorAll('.cat').forEach(c=>c.addEventListener('change',draw));
 ['line','person','yr'].forEach(i=>document.getElementById(i).addEventListener('input',draw));
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change',draw);
-draw();fit(true);
+{{
+ let initial=DEFAULT_TARGET;
+ const m=/p=([^&]+)/.exec(location.hash);
+ if(m&&PEOPLE[decodeURIComponent(m[1])])initial=decodeURIComponent(m[1]);
+ recenter(initial);
+}}
+fit(true);
 window.addEventListener('resize',()=>fit(true));
 </script></body></html>"""
 
